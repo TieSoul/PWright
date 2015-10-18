@@ -1,0 +1,24 @@
+say "test", "other test"
+person maya, "Maya", "Something", "Something else" {
+    talk 1 {
+        say "Maya", "kek"
+    }
+}
+place test, "The Testing Place" {
+    desc "Hey"
+    examine "mia","chief" {
+        say "", "Mia lies on the ground."
+        set flag one
+    }
+    when one, two {
+        continue
+    }
+}
+test:desc 'this is a very useful description.'
+maya:talk 1 {
+    say "Maya", "lol"
+    set flag two
+}
+test:person maya
+start test
+say "", "End of test."

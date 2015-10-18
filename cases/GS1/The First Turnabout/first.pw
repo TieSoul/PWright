@@ -1,0 +1,1082 @@
+objection 'phoenix-objection'
+holdit 'phoenix-holdit'
+takethat 'phoenix-takethat'
+
+cutscene "*gasp*... *gasp*..."
+sleep 1000
+music "case1pro"
+cutscene "Dammit! ...Why me?"
+sleep 1000
+cutscene "I can't get caught... not like this!"
+sleep 1000
+cutscene "I-I have to find someone to pin this on..."
+sleep 2000
+cutscene "Someone like... him! I'll make it look like HE did it!"
+sleep 6000
+music "stop"
+cls
+
+say "", "\033[32m\033[1mAugust 3, 9:47 AM\nDistrict Court\nDefendant Lobby No. 2\033[0m \b"
+
+adds profile "Mia Fey", "Age: 27\nGender: Female\nChief Attorney at Fey & Co.. My boss, and a very good defense attorney.", mia
+adds profile "Larry Butz", "Age: 23\nGender: Male\nThe defendant in this case. A likable guy who was my friend in high school.", larry
+adds profile "Cindy Stone", "Age: 22\nGender: Female\nThe victim in this case. A model, she lived in an apartment by herself.", stone
+adds profile "Winston Payne", "Age: 52\nGender: Male\nThe prosecutor for this case. Lacks presence. Generally bad at getting his points across.", payne
+adds evidence "Attorney's Badge", "Type: Other\nOne of my possessions.\nNo one would believe I was a defense attorney if I didn't carry this.", badge
+adds evidence "Cindy's Autopsy Report", "Type: Reports\nReceived from Mia Fey.\nTime of death: 7/31, 4PM-5PM\nCause of death: loss of blood due to blunt trauma.", autopsy
+
+music "lounge"
+think "Phoenix", "Boy am I nervous!"
+say "Mia", "Wright!"
+say "Phoenix", "Oh, h-hiya, Chief."
+say "Mia", "Whew, I'm glad I made it on time."
+say "Mia", "Well, I have to say Phoenix, I'm impressed!"
+say "Mia", "Not everyone takes on a murder case right off the bat like this."
+say "Mia", "It says a lot about you... and your client as well."
+say "Phoenix", "Um... thanks."
+say "Phoenix", "Actually, it's because I owe him a favor."
+say "Mia", "A favor?"
+say "Mia", "You mean, you knew the defendant before this case?"
+say "Phoenix", "Yes."
+say "Phoenix", "Actually, I kind of owe my current job to him."
+say "Phoenix", "He's one of the reasons I became an attorney."
+say "Mia", "Well, that's news to me!"
+say "Phoenix", "I want to help him out any way I can!"
+say "Phoenix", "I just... really want to help him. I owe him that much."
+say "???", "\033[32m\033[1m(It's over!)\033[0m \b"
+say "???", "\033[32m\033[1m(My life, everything, it's all over!)\033[0m \b"
+say "Mia", "..."
+say "Mia", "Isn't that your client screaming over there?"
+say "Phoenix", "Yeah... that's him."
+say "???", "\033[32m\033[1m(Death! Despair! Ohhhh!)\033[0m \b"
+say "???", "\033[32m\033[1m(I'm gonna do it, I'm gonna die!!!)\033[0m \b"
+say "Mia", "It sounds like he wants to die..."
+say "Phoenix", "Um, yeah. *sigh*"
+say "Butz", "Nick!!!"
+say "Phoenix", "Hey. Hey there, Larry."
+say "Butz", "Dude, I'm so guilty!! Tell them I'm guilty!!!"
+say "Butz", "Gimme the death sentence! I ain't afraid to die!"
+say "Phoenix", "What!? What's wrong, Larry?"
+say "Butz", "Oh, it's all over... I... I'm finished. Finished!"
+say "Butz", "I can't live in a world without her! I can't!"
+say "Butz", "Who... who took her away from me, Nick? Who did this!?"
+say "Butz", "Aww, Nick, ya gotta tell me! Who took my baby away!?"
+think "Phoenix", "Hmm... The person responsible for your girlfriend's death?"
+think "Phoenix", "The newspapers say it was \033[31m\033[1myou\033[0m \b..."
+music "stop"
+say "Phoenix", "My name is Phoenix Wright."
+say "Phoenix", "Here's the story:"
+say "Phoenix", "My first case is a fairly simple one."
+say "Phoenix", "A young woman was killed in her apartment."
+say "Phoenix", "The guy they arrested was the unlucky sap dating her:"
+say "Phoenix", "Larry Butz... my best friend since grade school."
+say "Phoenix", "Our school had a saying: \"\033[31m\033[1mWhen something smells, it's usually the Butz.\033[0m\""
+say "Phoenix", "In the 23 years I've known him, it's usually been true."
+say "Phoenix", "He has a knack for getting himself in trouble."
+say "Phoenix", "One thing I can say though: it's usually not his fault. He just has terrible luck."
+say "Phoenix", "But I know better than anyone, that he's a good guy at heart."
+say "Phoenix", "That and I owe him one. Which is why I took the case... to clear his name."
+say "Phoenix", "And that's just what I'm going to do!"
+
+cls
+
+say "", "\033[32m\033[1mAugust 3, 10:00 AM\nDistrict Court\nCourtroom No. 2\033[0m \b"
+music "court"
+sfx "crowd"
+sfx "gavel"
+say "Judge", "The court is now in session for the trial of Mr. Larry Butz."
+say "Payne", "The prosecution is ready, Your Honor."
+say "Phoenix", "The, um, defense is ready, Your Honor."
+say "Judge", "Ahem."
+say "Judge", "Mr. Wright?"
+say "Judge", "This is your first trial, is it not?"
+say "Phoenix", "Y-Yes, Your Honor. I'm, um, a little nervous."
+say "Judge", "Your conduct during this trial will decide the fate of your client."
+say "Judge", "Murder is a serious charge. For your client's sake, I hope you can control your nerves."
+say "Phoenix", "Thank... thank you, Your Honor."
+say "Judge", "..."
+say "Judge", "Mr. Wright, given the circumstances..."
+say "Judge", "I think we should have a test to ascertain your readiness."
+say "Phoenix", "Yes, Your Honor."
+think "Phoenix", "Gulp... Hands shaking... Eyesight... fading..."
+say "Judge", "The test will consist of a few simple questions. Answer them clearly and concisely."
+say "Judge", "Please state the name of the defendant in this case."
+question "What is the defendant's name?"
+options "Phoenix Wright", "Larry Butz", "Mia Fey" {
+    answer 1 {
+        say "Phoenix", "Um... the defendant... is me, right?"
+        say "Mia", "Wright! Have you completely lost your mind? Focus!"
+        say "Mia", "The defendant is the person on trial!"
+        say "Mia", "You're his lawyer!"
+        say "Phoenix", "Um, er, eh? Oh yeah, right! Eh heh heh."
+        say "Mia", "This is no laughing matter!"
+        say "Mia", "You did pass the bar, didn't you?"
+        say "Judge", "Sorry, I couldn't hear your answer. I'll ask once more:"
+        return
+    }
+    answer 3 {
+        say "Phoenix", "The, um, defendant? That's... er... Mia Fey?"
+        say "Mia", "Wrong, Wright. Look, I have to leave."
+        say "Mia", "I have to go home, I'm... I'm expecting a delivery."
+        say "Phoenix", "Aw, c'mon Chief. There's no need to be going so soon, is there?"
+        say "Mia", "Wright!"
+        say "Mia", "Listen: The defendant is the one on trial -- your client!"
+        say "Mia", "I mean, that's about as basic as you can get!"
+        think "Phoenix", "I put my foot in it this time! I've got to relax!"
+        say "Judge", "Sorry, I couldn't hear your answer. I'll ask once more:"
+        return
+    }
+    answer 2 {
+        continue
+    }
+}
+say "Phoenix", "The defendant? Well, that's Larry Butz, Your Honor."
+say "Judge", "Correct."
+say "Judge", "Just keep your wits about you and you'll do fine."
+say "Judge", "Next question:"
+say "Judge", "This is a murder trial. Tell me, what's the victim's name?"
+think "Phoenix", "Whew, I know this one! Glad I read the case report cover to cover so many times."
+think "Phoenix", "It's... wait... Uh-oh!"
+think "Phoenix", "No... no way! I forgot! I'm drawing a total blank here!"
+say "Mia", "Phoenix! Are you absolutely SURE you're up to this?"
+say "Mia", "You don't even know the victim's name!?"
+say "Phoenix", "Oh, the victim! O-Of course I know the victim's name!"
+say "Phoenix", "I, um, just forgot. ... Temporarily."
+say "Mia", "I think I feel a migraine coming on."
+say "Mia", "Look, the victim's name is listed in the Court Record."
+say "Mia", "Just type 'cr' to view the Court Record at any time, okay?"
+say "Mia", "Remember to check it often. Do it for me, please. I'm begging you."
+say "Judge", "Let's hear your answer. Who is the victim in this case?"
+question "What is the victim's name?"
+options "Mia Fey", "Cinder Block", "Cindy Stone" {
+    answer 1 {
+        say "Phoenix", "Um... Mia Fey?"
+        say "Mia", "W-W-What!? How can I be the victim!?"
+        say "Phoenix", "Oh! Right! Sorry! I, er, it was the first name that popped into my head, and --"
+        say "Mia", "The Court Record! Remember to check it whenever you're in a pinch."
+        say "Judge", "Let me ask that one again:"
+        return
+    }
+    answer 2 {
+        say "Phoenix", "Oh, um, wasn't it Ms. Block? Ms. Cinder Block?"
+        say "Judge", "The person in question was a victim of murder, not ill-conceived naming, Mr. Wright."
+        say "Mia", "Wright?"
+        say "Mia", "If you forget something, just check the Court Record to help you remember."
+        say "Mia", "A mistake in court could cost you the case."
+        say "Judge", "I'll ask you again:"
+        return
+    }
+    answer 3 {
+        continue
+    }
+}
+say "Phoenix", "Um... the victim's name is Cindy Stone."
+say "Judge", "Correct."
+say "Judge", "Now tell me, what was the cause of death?"
+say "Judge", "She died because she was...?"
+question "What is the cause of death?"
+options "Poisoned", "Hit with a blunt object", "Strangled" {
+    answer 1 {
+        say "Phoenix", "Oh, right! Wasn't she, um, poisoned by er... poison?"
+        say "Judge", "You're asking me!?"
+        say "Phoenix", "Um... Chief! Help me out!"
+        say "Mia", "Check the Court Record. 'cr'... remember?"
+        think "Phoenix", "Geez. Give a guy a break!"
+        say "Judge", "Let me ask again."
+        return
+    }
+    answer 2 {
+        continue
+    }
+    answer 3 {
+        say "Phoenix", "Right... she was strangled, wasn't she?"
+        say "Mia", "Please tell me that was you talking to yourself."
+        say "Judge", "If you wish to hang yourself, Mr. Wright, you're welcome to, but not inside my courtroom."
+        say "Judge", "I suppose there's nothing to do but give you another try:"
+        return
+    }
+}
+say "Phoenix", "She was struck once, by a blunt object."
+say "Judge", "Correct."
+say "Judge", "You've answered all of my questions. I see no reason why we shouldn't proceed."
+say "Judge", "You seem much more relaxed, Mr. Wright. Good for you."
+say "Phoenix", "Thank you, Your Honor."
+think "Phoenix", "Because I don't FEEL relaxed, that's for sure."
+say "Judge", "Well, then..."
+say "Judge", "First, a question for the prosecution. Mr. Payne?"
+say "Payne", "Yes, Your Honor?"
+say "Judge", "As Mr. Wright just told us, the victim was struck with a blunt object."
+say "Judge", "Would you explain to the court just what that \"object\" was?"
+say "Payne", "The murder weapon was this statue of \"The Thinker.\""
+say "Payne", "It was found lying on the floor, next to the victim."
+say "Judge", "I see... the court accepts it into evidence."
+add evidence "Statue", "Type: Weapons\nSubmitted as evidence by Prosecutor Payne.\nA statue in the shape of \"The Thinker.\" It's rather heavy.", statue
+say "Mia", "Wright..."
+say "Mia", "Make sure to pay attention to any evidence added during a trial."
+say "Mia", "That evidence is the only ammunition you have in court."
+say "Mia", "Type 'cr' to check the Court Record frequently."
+sfx "gavel"
+say "Judge", "Mr. Payne, the prosecution may call its first witness."
+say "Payne", "The prosecution calls the defendant, Mr. Butz, to the stand."
+say "Phoenix", "Um, Chief, what do I do now?"
+say "Mia", "Pay attention. You don't want to miss any information that might help your client's case."
+say "Mia", "You'll get the chance to respond to the prosecution later, so be ready!"
+say "Mia", "Let's just hope he doesn't say anything... unfortunate."
+think "Phoenix", "Uh oh, Larry gets excited easily... this could be bad."
+say "Payne", "Ahem."
+say "Payne", "Mr. Butz. Is it not true that the victim had recently dumped you?"
+say "Butz", "Hey, watch it buddy!"
+say "Butz", "We were great together! We were Romeo and Juliet, Cleopatra and Mark Anthony!"
+think "Phoenix", "Um... didn't they all die?"
+say "Butz", "I wasn't dumped! She just wasn't taking my phone calls. Or seeing me... Ever."
+say "Butz", "WHAT'S IT TO YOU, ANYWAY!?"
+say "Payne", "Mr. Butz, what you describe is generally what we mean by \"dumped.\""
+say "Payne", "In fact, she had completely abandoned you... and was seeing other men!"
+say "Payne", "She had just returned from overseas with one of them the day before the murder!"
+say "Butz", "Whaddya mean, \"one of them\"!?"
+say "Butz", "Lies! All of it, lies! I don't believe a word of it!"
+say "Payne", "Your Honor, the victim's passport."
+say "Payne", "According to this, she was in Paris until the day before she died."
+add evidence "Passport", "Type: Evidence\nSubmitted as evidence by Prosecutor Payne.\nThe victim apparently arrived home from Paris on 7/30, the day before the murder.", passport
+say "Butz", "Dude... no way..."
+say "Payne", "The victim was a model, but did not have a large income."
+say "Payne", "It appears that she had several \"Sugar Daddies.\""
+say "Butz", "Daddies? Sugar?"
+say "Payne", "Yes. Older men, who gave her money and gifts."
+say "Payne", "She took their money and used it to support her lifestyle."
+say "Butz", "Duuude!"
+say "Payne", "We can clearly see what kind of woman this Ms. Stone was."
+say "Payne", "Tell me, Mr. Butz, what do you think of her now?"
+say "Mia", "Wright..."
+say "Mia", "I don't think you want him to answer that question."
+think "Phoenix", "Yeah... Larry has a way of running his mouth in all the wrong directions."
+think "Phoenix", "Should I...?"
+question "Stop Larry from answering?"
+options "Wait and see what happens", "Stop him from answering" {
+    answer 1 {
+        think "Phoenix", "Might be better not to get involved in this one..."
+        say "Payne", "Well, Mr. Butz?"
+        say "Butz", "Dude, no way! That cheatin' she-dog!"
+        continue
+    }
+    answer 2 {
+        say "Phoenix", "My client had no idea the victim was seeing other men!"
+        say "Phoenix", "That question is irrelevant to this case!"
+        say "Payne", "Oof! *wince*"
+        say "Butz", "Dude! Nick! Whaddya mean, \"irrelevant\"!?"
+        say "Butz", "That cheatin' she-dog!"
+        continue
+    }
+}
+say "Butz", "I'm gonna die. I'm just gonna drop dead!"
+say "Butz", "Yeah, and when I meet her in the afterlife..."
+say "Butz", "I'm gonna get to the bottom of this!"
+sfx 'crowd'
+sfx 'gavel'
+say "Judge", "Let's continue with the trial, shall we?"
+say "Payne", "I believe the accused's motive is clear to everyone."
+say "Judge", "Yes, quite."
+think "Phoenix", "Oh boy. This is so not looking good."
+say "Payne", "Next question!"
+say "Payne", "You went to the victim's apartment on the day of the murder, did you not?"
+say "Butz", "Gulp!"
+say "Payne", "Well, did you, or did you not?"
+say "Butz", "Heh? Heh heh. Well, maybe I did, and maybe I didn't!"
+think "Phoenix", "Uh oh. He went."
+think "Phoenix", "What do I do?"
+question "What do you do?"
+options "Have him answer honestly", "Stop him from answering" {
+    answer 1 {
+        think "Phoenix", "I know! I'll send him a signal..."
+        cutscene "Using body language, you try to tell Larry to tell the truth."
+        say "Butz", "Er... Yeah! Yeah! I was there! I went!"
+        sfx 'crowd'
+        sfx 'gavel'
+        say "Judge", "Order!"
+        say "Judge", "Well, Mr. Butz?"
+        say "Butz", "Dude, chill!"
+        say "Butz", "She wasn't home, man... So, like, I didn't see her."
+        sfx 'payne-objection'
+        say "Payne", "Objection!"
+        say "Payne", "Your Honor, the defendant is lying."
+        say "Judge", "Lying?"
+        say "Payne", "The prosecution would like to call a witness who can prove Mr. Butz is lying."
+        continue
+    }
+    answer 2 {
+        think "Phoenix", "I'll send him a signal..."
+        cutscene "Using body language, you try to tell Larry to lie."
+        say "Butz", "Um, well, see, it's like this: I don't remember."
+        say "Payne", "You \"don't remember\"?"
+        say "Payne", "Well then, we'll just have to remind you!"
+        think "Phoenix", "I got a bad feeling about this..."
+        say "Payne", "We have a witness that can prove he DID go to the victim's apartment that day!"
+        continue
+    }
+}
+say "Judge", "Well, that simplifies matters. Who is your witness?"
+say "Payne", "The man who found the victim's body."
+say "Payne", "Just before making the gruesome discovery..."
+say "Payne", "He saw the defendant fleeing the scene of the crime!"
+sfx 'crowd'
+sfx 'gavel'
+say "Judge", "Order! Order in the court!"
+say "Judge", "Mr. Payne, the prosecution may call its witness."
+say "Payne", "Yes, Your Honor."
+think "Phoenix", "This is bad..."
+say "Payne", "On the day of the murder, my witness was selling newspapers at the victim's building."
+say "Payne", "Please bring Mr. Frank Sahwit to the stand!"
+cutscene "A man in a cheap-looking purple suit takes the stand."
+adds profile "Frank Sahwit", "Age: 36\nGender: Male\nDiscovered Ms. Stone's body. Newspaper salesman who saw Larry flee the scene.", sahwit
+say "Payne", "Mr. Sahwit, you sell newspaper subscriptions, is this correct?"
+say "Sahwit", "Oh, oh yes! Newspapers, yes!"
+say "Judge", "Mr. Sahwit, you may proceed with your testimony."
+say "Judge", "Please tell the court what you saw at the scene of the crime."
+music 'cross-examination1'
+testimony "Witness's Account", "Sahwit" {
+    statement "I was going door-to-door, selling subscriptions when I saw a man fleeing an apartment."
+    statement "I thought he must be in a hurry because he left the door half-open behind him."
+    statement "Thinking it strange, I looked inside the apartment."
+    statement "Then I saw her lying there... A woman... not moving... dead!"
+    statement "I quailed in fright and found myself unable to go inside."
+    statement "I thought to call the police immediately!"
+    statement "However, the phone in her apartment wasn't working."
+    statement "I went to a nearby park and found a public phone."
+    statement "I remember the time exactly: It was 1:00 PM."
+    statement "The man who ran was, without a doubt, the defendant sitting right over there."
+}
+music 'stop'
+say "Judge", "Hmm..."
+think "Phoenix", "Larry! Why didn't you tell the truth?"
+think "Phoenix", "I can't defend you against a testimony like that!"
+say "Judge", "Incidentally, why wasn't the phone in the victim's apartment working?"
+say "Payne", "Your Honor, at the time of the murder, there was a blackout in the building."
+say "Judge", "Aren't phones supposed to work during a blackout?"
+say "Payne", "Yes, Your Honor..."
+say "Payne", "However, some cordless phones do not function normally."
+say "Payne", "The phone that Mr. Sahwit used was one of those."
+say "Payne", "Your Honor..."
+say "Payne", "I have a record of the blackout, for your perusal."
+add evidence "Blackout Record", "Type: Documents\nSubmitted as evidence by Prosecutor Payne.\nElectricity to Ms. Stone's building was out from noon to 6PM on the day of the crime.", blackout
+say "Judge", "Now, Mr. Wright..."
+say "Phoenix", "Yes! Er... yes, Your Honor?"
+say "Judge", "You may begin your cross-examination."
+say "Phoenix", "C-Cross-examination, Your Honor?"
+music 'truth'
+say "Mia", "Alright, Wright, this is it. The real deal!"
+say "Phoenix", "Uh... what exactly am I supposed to do?"
+say "Mia", "Why, you expose the lies in the testimony the witness just gave!"
+say "Phoenix", "Lies! What?! He was lying!?"
+say "Mia", "Your client is innocent, right?"
+say "Phoenix", "Then that witness must have lied in his testimony!"
+say "Mia", "Or is your client really... guilty?"
+say "Phoenix", "!!! How do I prove he's not?"
+say "Mia", "You hold the key! It's in the evidence!"
+say "Mia", "Compare the witness's testimony to the evidence at hand."
+say "Mia", "There's bound to be a contradiction in there!"
+say "Mia", "First, find contradictions between the Court Record and the witness's testimony."
+say "Mia", "Then, once you've found the contradicting evidence..."
+say "Mia", "present it and rub it in the witness's face!"
+say "Phoenix", "Um... okay."
+say "Mia", "Type 'present (evidence)' and point out contradictions in the testimony!"
+say "Mia", "If you can't find any contradictions in the testimony, you can press the witness for more details!"
+say "Mia", "Just type 'press'! To navigate between statements, type 'next' and 'prev'!"
+music 'cross-examination1'
+cross-examination {
+    press 1 {
+        say "Phoenix", "Isn't a man leaving an apartment a common sight?"
+        say "Phoenix", "I find it odd you would take notice of him..."
+        say "Sahwit", "Er... heh."
+        say "Sahwit", "I don't know. He just seemed strange to me, that's all."
+        say "Sahwit", "Like he was mad, and yet frightened at the same time."
+        say "Sahwit", "Just like... a criminal fleeing the scene of a crime!"
+        say "Phoenix", "The defense requests that the witness refrain from conjecture!"
+        say "Payne", "Of course. What the witness means is that the man he saw looked suspicious."
+        say "Payne", "So, what happened next?"
+        next
+    }
+    press 2 {
+        say "Phoenix", "Half-open... you say?"
+        say "Sahwit", "Yes, yes, the door was open halfway. Yes."
+        say "Sahwit", "I watched for a moment, but no one came to close the door."
+        say "Sahwit", "\"That's odd, in a big city like this,\" I thought..."
+        say "Payne", "I see. And what happened next?"
+        next
+    }
+    press 3 {
+        say "Phoenix", "What gave you the idea to do that?"
+        say "Sahwit", "Well, the door was half-open, you see."
+        say "Sahwit", "Isn't it only human to want to... peek?"
+        say "Sahwit", "We climb mountains because they are there! It's the same thing."
+        say "Payne", "Truer words have never been spoken! Anyone would look inside!"
+        think "Phoenix", "Hmm... why did Payne cut him off so quickly?"
+        say "Payne", "So, you looked into the apartment. What happened then?"
+        next
+    }
+    press 4 {
+        say "Phoenix", "Are you sure she was dead?"
+        say "Sahwit", "W-Well, no, I guess I wasn't."
+        say "Sahwit", "But, she wasn't moving at all, and there was blood everywhere."
+        think "Phoenix", "I guess that would look fatal to anyone..."
+        say "Phoenix", "Very well, what happened next?"
+        next
+    }
+    press 5 {
+        say "Phoenix", "So, you didn't touch ANYTHING in the apartment?"
+        say "Sahwit", "Um, yes. I mean no! Nothing."
+        say "Phoenix", "Okay. What happened next?"
+        next
+    }
+    press 6 {
+        say "Phoenix", "You \"thought\" to call the police? Does that mean you didn't actually call them!?"
+        say "Payne", "Please, please... Listen to the rest of the testimony."
+        say "Payne", "You thought to call the police... What happened next?"
+        next
+    }
+    press 7 {
+        say "Phoenix", "The phone in her apartment wasn't working?"
+        say "Sahwit", "Yes. I mean, no, no it wasn't. Right."
+        say "Phoenix", "But you said you didn't go into the apartment... or did you!?"
+        say "Sahwit", "Oh, oh, that? I can explain that!"
+        say "Sahwit", "There was a cordless phone on a shelf in the entranceway."
+        say "Sahwit", "I reached inside and tried using that to call..."
+        say "Payne", "And that phone wasn't working, correct?"
+        say "Payne", "What happened next?"
+        next
+    }
+    press 8 {
+        say "Phoenix", "Why use a public phone?"
+        say "Sahwit", "Well, you see, I don't have a cell phone."
+        say "Sahwit", "And, being the middle of the afternoon, there was no answer at the nearby apartments."
+        say "Phoenix", "Ah, right... what time did you call again?"
+        next
+    }
+    press 9 {
+        say "Phoenix", "1:00 PM! Are you certain?"
+        say "Sahwit", "Yes. Absolutely."
+        think "Phoenix", "Hmm... He seems really confident."
+        say "Mia", "1:00 PM?"
+        say "Mia", "Wright. Doesn't that seem strange to you?"
+        say "Mia", "Present some evidence to contradict him!"
+        return
+    }
+    press 10 {
+        say "Phoenix", "Are you absolutely, 100% positive?"
+        say "Sahwit", "Yes, it was him. No mistake about it."
+        say "Payne", "The witness says he's certain!"
+        return
+    }
+    present default {
+        say "Phoenix", "This evidence clearly reveals the contradiction in that statement, Your Honor!"
+        say "Judge", "How exactly are that evidence and the statement just now related...?"
+        say "Phoenix", "They aren't, are they..."
+        say "Judge", "Not at all."
+        say "Judge", "Mr. Wright, please think the facts over before making accusations."
+        penalize
+        think "Phoenix", "I don't think that won me any points with the judge..."
+        return
+    }
+    present autopsy, 9 {
+        continue
+    }
+    end {
+        say "Mia", "That's all of it."
+        say "Mia", "There must be a contradiction in there somewhere."
+        say "Mia", "Examine the Court Record if something strikes you as being suspicious."
+        say "Mia", "Then, find the evidence that contradicts his testimony, and present it to him!"
+        return
+    }
+}
+music 'stop'
+say "Phoenix", "You found the body at 1:00 PM. You're sure?"
+say "Sahwit", "Yes. It was 1:00 PM, for certain."
+say "Phoenix", "Frankly, I find that hard to believe!"
+music 'objection'
+say "Phoenix", "Your statement directly contradicts the autopsy report."
+say "Phoenix", "The autopsy notes the time of death at sometime after 4 PM."
+say "Phoenix", "There was nobody to... er... no \"body\" to find at 1:00 PM!"
+say "Phoenix", "How do you explain this three-hour gap?"
+say "Sahwit", "!!!"
+say "Sahwit", "Oh, that! Oh, er..."
+sfx 'payne-objection'
+say "Payne", "This is trivial! The witness merely forgot the time!"
+say "Judge", "After his testimony, I find that hard to believe."
+say "Judge", "Mr. Sahwit..."
+say "Judge", "Why were you so certain that you found the body at 1:00 PM?"
+say "Sahwit", "I... er... well, I... Gee, that's a really good question!"
+say "Mia", "Great job, Wright! Way to put him on the spot!"
+say "Mia", "That's all you have to do: point out the contradictions!"
+say "Mia", "Lies always beget more lies!"
+say "Mia", "See through one, and their whole story falls apart!"
+say "Sahwit", "Wait! I remember now!"
+say "Judge", "Would you care to give your testimony again?"
+music 'cross-examination1'
+testimony "The Time of Discovery", "Sahwit" {
+    statement "You see, when I found the body, I heard the time."
+    statement "There was a voice saying the time... It was probably coming from the television."
+    statement "Oh, but it was three hours off, wasn't it?"
+    statement "I guess the victim must have been watching a video of a taped program!"
+    statement "That's why I thought it was 1:00 PM!"
+    statement "Terribly sorry about the misunderstanding..."
+}
+music "stop"
+say "Judge", "Hmm... I see. You heard a voice saying the time on a taped program."
+say "Judge", "Mr. Wright, you may cross-examine the witness."
+say "Mia", "Wright!"
+say "Mia", "You know what to do!"
+say "Phoenix", "I've got this one."
+music 'cross-examination1'
+cross-examination {
+    press 1 {
+        say "Phoenix", "You said \"heard\"... Not \"saw\"?"
+        say "Sahwit", "Yes, heard."
+        say "Sahwit", "All I saw was the body lying there..."
+        say "Sahwit", "I didn't think to look at anything else, least of all my watch."
+        say "Phoenix", "Hmm... Isn't that a little strange?"
+        say "Phoenix", "So you're saying you \"heard\" something."
+        say "Phoenix", "But if you were so shocked by the body, you wouldn't hear anything at all!"
+        sfx 'payne-objection'
+        say "Payne", "The witness did say he actually heard the time."
+        say "Payne", "It's ludicrous to suggest he \"wouldn't hear anything\"!"
+        say "Judge", "Hmm... I have to agree with the prosecution."
+        say "Judge", "Witness, continue your testimony."
+        next
+    }
+    press 2 {
+        say "Phoenix", "Are you sure it was a television and not... a radio?"
+        say "Sahwit", "Well, no, I guess it might have been a radio."
+        say "Payne", "Incidentally, there was no radio on the premises."
+        say "Payne", "There was only one large television."
+        say "Mia", "Wright!"
+        say "Mia", "I can't put my finger on it, but something about this seems fishy."
+        say "Mia", "Something about \"hearing\" the television..."
+        say "Payne", "The witness has testified. He heard the time."
+        next
+    }
+    press 3 {
+        say "Phoenix", "How do you explain the gap!"
+        say "Judge", "Well, witness? Can you explain this?"
+        next
+    }
+    press 4 {
+        say "Phoenix", "A... video?"
+        say "Sahwit", "Yes, that would explain why the time was wrong!"
+        say "Phoenix", "True, true..."
+        say "Mia", "Wright!"
+        say "Mia", "I think the problem lies someplace else..."
+        say "Judge", "We're agreed that you heard the time at the scene, then."
+        next
+    }
+    press 5 {
+        say "Phoenix", "Are you sure the voice you heard said it was 1:00 PM?"
+        say "Sahwit", "Yes, I can practically hear it now. It was quite clear."
+        say "Judge", "Mr. Payne, has the prosecution verified this testimony?"
+        say "Payne", "My apologies, Your Honor."
+        say "Payne", "I, too, have only just learned that the witness \"heard\" the time."
+        say "Sahwit", "Oh, I'm really sorry. I only remembered it just now."
+        next
+    }
+    press 6 {
+        say "Phoenix", "Well, you just watch it!"
+        think "Phoenix", "Hmm... Not much point pressing him on that one, was there?"
+        return
+    }
+    end {
+        say "Mia", "Notice anything suspicious?"
+    }
+    present default {
+        say "Phoenix", "Your Honor! That statement contradicts this evidence!"
+        say "Judge", "...?"
+        say "Judge", "It does? I don't see anything contradictory..."
+        say "Phoenix", "Huh? Really?"
+        say "Judge", "Objection overruled."
+        say "Judge", "Try to think before you make accusations, Mr. Wright!"
+        penalize
+        think "Phoenix", "Whoops! That didn't go so well."
+        return
+    }
+    present blackout, 1, 2, 3, 4, 5 {
+        continue
+    }
+}
+music 'stop'
+say "Phoenix", "Hold it right there!"
+say "Phoenix", "The prosecution has said there was a blackout at the time of the discovery!"
+say "Phoenix", "And this record proves it!"
+say "Sahwit", "...!"
+music 'objection'
+say "Phoenix", "You couldn't have heard a television... or a video!"
+say "Sahwit", "Gah!!!"
+say "Sahwit", "I... well... urk!"
+say "Judge", "The defense has a point."
+say "Judge", "Do you have an explanation for this, Mr. Sahwit?"
+say "Sahwit", "No, I... I find it quite puzzling myself! Quite!"
+say "Sahwit", "..."
+say "Sahwit", "Aah! W-wait! I remember now!"
+say "Judge", "Mr. Sahwit?"
+say "Judge", "The court would prefer to hear an accurate testimony from the very beginning."
+say "Judge", "These constant corrections are harming your credibility."
+say "Judge", "That, and you seem rather... distraught."
+say "Sahwit", "...!"
+say "Sahwit", "M-my apologies, Your Honor!"
+say "Sahwit", "It... er, it must have been the shock of finding the body!"
+say "Judge", "Very well, Mr. Sahwit."
+say "Judge", "Let's hear your testimony once more please."
+music 'cross-examination1'
+testimony "Hearing the Time", "Sahwit" {
+    statement "Actually, I didn't \"hear\" the time... I \"saw\" it!"
+    statement "There was a table clock in the apartment, wasn't there!"
+    statement "Yeah, the murder weapon! The killer used it to hit the victim!"
+    statement "That must have been what I saw."
+}
+music 'stop'
+say "Judge", "You saw a clock? I guess that would explain it."
+say "Judge", "The defense may cross-examine the witness."
+say "Phoenix", "Gladly."
+music 'cross-examination1'
+cross-examination {
+    press 1 {
+        say "Phoenix", "That strikes me as a very suspicious mistake."
+        say "Sahwit", "Yes, I can see how you'd be a little doubtful..."
+        say "Sahwit", "I'm really sorry. I only just remembered that table clock!"
+        say "Judge", "A \"table clock\"?"
+        next
+    }
+    press 2 {
+        say "Phoenix", "A \"table clock\"? Was there a clock at the scene?"
+        say "Judge", "This is the first I've heard of it!"
+        next
+    }
+    press 3 {
+        say "Phoenix", "The... murder weapon?"
+        say "Sahwit", "Yes, the table clock that was used as a weapon!"
+        say "Sahwit", "That's what I just said. Did you doze off in the middle of my testimony or something?"
+        think "Phoenix", "Something's fishy here..."
+        next
+    }
+    press 4 {
+        say "Phoenix", "Why didn't you tell us that in the first place?"
+        say "Sahwit", "I guess it just slipped my mind!"
+        say "Sahwit", "I'm not really sure how it happened myself..."
+        say "Payne", "The witness says he saw the table clock. End of story."
+        next
+    }
+    end {
+        say "Mia", "Now, find the contradiction!"
+    }
+    present default {
+        say "Phoenix", "This evidence clearly reveals the contradiction in that statement, Your Honor!"
+        say "Judge", "How exactly are that evidence and the statement just now related...?"
+        say "Phoenix", "They aren't, are they..."
+        say "Judge", "Not at all."
+        say "Judge", "Mr. Wright, please think the facts over before making accusations."
+        penalize
+        think "Phoenix", "I don't think that won me any points with the judge..."
+        return
+    }
+    present statue, 2, 3, 4 {
+        continue
+    }
+}
+music 'stop'
+say "Phoenix", "Wait just a moment!"
+say "Phoenix", "The murder weapon wasn't a clock. It was this statue!"
+say "Phoenix", "Now how is this supposed to be a clock?"
+music 'cornered'
+say "Sahwit", "Whaa-? Y-you with your \"objections,\" and your \"evidence\"... Just who do you think you are!?"
+say "Phoenix", "Just answer the question, Mr. Sahwit."
+say "Sahwit", "Hey, I... I saw it there, okay! That's a clock!"
+say "Payne", "Your Honor! If I may..."
+say "Judge", "Yes, Mr. Payne?"
+say "Payne", "As the witness stated, this statue is indeed a clock."
+say "Payne", "The neck is a switch. You just tilt it, and it says the time out loud."
+say "Payne", "As it doesn't look like a clock, I submitted it as a statue. My apologies."
+say "Judge", "I see."
+say "Judge", "So the murder weapon was a table clock after all."
+say "Judge", "Well, Mr. Wright?"
+say "Judge", "It appears that the witness's testimony was correct. This is a clock."
+say "Judge", "Do you have any problems with his testimony now?"
+question "Do you have any problems?"
+options "No", "Yes" {
+    answer 1 {
+        say "Phoenix", "I guess not."
+        say "Phoenix", "There was a clock on the scene, so, no problem."
+        say "Mia", "Wright! Are you out of your mind!?"
+        say "Mia", "That clock doesn't look like a clock at all!"
+        say "Mia", "The witness couldn't have possibly known it was a clock just by seeing it!"
+        say "Mia", "He said himself, he never entered the apartment!"
+        say "Mia", "It was in his testimony!"
+        say "Phoenix", "Hey! You're right!"
+        say "Judge", "Is something the matter? Does the defense have anything to add?"
+        say "Phoenix", "Yes... Yes I do!"
+        continue
+    }
+    answer 2 {
+        say "Phoenix", "Your Honor, there is a gaping hole in the witness's testimony!"
+        continue
+    }
+}
+say "Phoenix", "The only way he could have known the weapon was a clock is to hold it in his hand."
+say "Phoenix", "Yet the witness testified that he never entered the apartment!"
+say "Phoenix", "Clearly, a contradiction!"
+say "Judge", "Hmm... indeed!"
+say "Phoenix", "The witness knew it was a clock, because he..."
+question "The witness knew it was a clock, because he..."
+options "Went into the apartment", "Knew the victim" {
+    answer 1 {
+        continue
+    }
+    answer 2 {
+        say "Phoenix", "Tell me, isn't it true that you knew the victim?"
+        say "Phoenix", "In fact, you were one of her \"sugar daddies\"! Be frank with us, Mr. Sahwit!"
+        say "Sahwit", "Hmph."
+        say "Sahwit", "\"Frank\"? I'm always \"Frank\"!"
+        say "Payne", "Your Honor."
+        say "Payne", "We have complete records of the victim's relationships."
+        say "Payne", "Mr. Frank Sahwit does not appear anywhere."
+        say "Phoenix", "Huh? Oh, really?"
+        say "Judge", 'Please, Mr. Wright... Is "Huh" the best response you can muster up?'
+        say "Judge", "Try to refrain from making off-the-cuff accusations in the future."
+        say "Phoenix", "Y-yes, Your Honor. Let me think this over."
+        return
+    }
+}
+say "Phoenix", "You're lying!"
+say "Phoenix", "You were inside the apartment on the day of the murder!"
+say "Sahwit", "Oh yeah? Prove it! Prove I went in there!"
+say "Phoenix", "I'll do better than that! I can prove you were the one who killed her!"
+say "Phoenix", "You struck her with the clock, and the shock of the blow triggered the clock's voice!"
+say "Phoenix", "That was the sound you heard!"
+sfx 'crowd'
+sfx 'gavel'
+say "Judge", "Order in the court!"
+say "Judge", "Intriguing. Please continue, Mr. Wright."
+say "Phoenix", "Yes, Your Honor."
+say "Phoenix", "Mr. Sahwit."
+say "Phoenix", "The sound must have left quite an impression on you."
+say "Phoenix", "Understandable, since the murder weapon spoke just as you hit the victim!"
+say "Phoenix", "That voice was burned into your mind."
+say "Phoenix", "That's why you were so certain about the time!"
+sfx 'payne-objection'
+say "Payne", "W-w-what's the meaning of this?"
+say "Payne", "This is all baseless conjecture!"
+say "Phoenix", "Baseless...?"
+say "Phoenix", "Just look at the witness's face!"
+cutscene "Mr. Sahwit, usually calm and composed, has an irate expression on his face."
+say "Sahwit", "Ngh... grrrah!"
+say "Judge", "Would the witness care to elaborate?"
+say "Judge", "Did you strike the victim with the clock?"
+say "Sahwit", "I... I...! That... That day... I... I never!"
+say "Sahwit", "Look... I... The clock... I heard, no! I saw... saw..."
+say "Sahwit", "Ngraaaaah!"
+cutscene "Mr. Sahwit picks his toupee off his head and throws it at you."
+say "Sahwit", "Shutupshutupshutupshutup! I hate you!"
+say "Sahwit", "I-it was him, I tell you! I saw him!"
+say "Sahwit", "H-he killed her and he should burn! Burn! Give him death!"
+sfx 'crowd'
+sfx 'gavel'
+music 'stop'
+say "Judge", "Order! Order in the court I say!"
+say "Payne", "Your Honor, a-a moment please!"
+say "Payne", "There isn't a shred of evidence supporting the defense's claims!"
+say "Judge", "Mr. Wright!"
+say "Phoenix", "Your Honor?"
+say "Judge", "You claim the sound the witness heard came form the clock..."
+say "Judge", "Do you have any evidence?"
+think "Phoenix", "The whole case is riding on this! I'd better think it through carefully!"
+say "Phoenix", "Yes, Your Honor."
+say "Phoenix", "The sound Mr. Sahwit heard was definitely this clock."
+say "Phoenix", "A fact which is clear if you simply..."
+question "The fact Mr. Sahwit heard the clock becomes clear if you simply..."
+options "Examine the clock's batteries", "Ask the neighbors", "Try sounding the clock" {
+    answer 1 {
+        say "Phoenix", "All you have to do is examine the batteries!"
+        say "Judge", "Indeed? The batteries are... in the right way. The clock seems to be working fine."
+        say "Judge", "What exactly did you mean, Mr. Wright?"
+        say "Phoenix", "Yes, the clock was working fine!"
+        say "Payne", "Yes, and...?"
+        say "Phoenix", "..."
+        say "Phoenix", "Umm, I'm sorry, I think I got confused back there with all those testimonies."
+        say "Judge", "Mr. Wright!"
+        say "Judge", "I expect more from a lawyer in this court. Even if it is your first day."
+        say "Judge", "I'm afraid I have to penalize you! Try to think things through more carefully."
+        penalize
+        say "Phoenix", "Y-yes, Your Honor. As I was saying..."
+        return
+    }
+    answer 2 {
+        say "Phoenix", "All you have to do is talk to the victim's neighbors!"
+        say "Judge", "Talk to the neighbors...?"
+        say "Phoenix", "I'm sure one of them heard the clock tell the time when the incident occurred!"
+        say "Judge", "I see..."
+        say "Judge", "Does the prosecution have anything to say, Mr. Payne?"
+        say "Payne", "We have already made all the necessary inquiries."
+        say "Payne", "Everyone living near the victim's apartment was out at the time of the murder."
+        say "Payne", "Furthermore, even if a neighbor had heard the clock,"
+        say "Payne", "That would not prove that Mr. Sahwit had heard anything."
+        say "Judge", "Hmm... That is true."
+        say "Judge", "I believe you may be wrong, Mr. Wright."
+        say "Judge", "You'll receive a penalty for that, unfortunately."
+        penalize
+        say "Phoenix", "I-I'm sorry, Your Honor! Let me think about it again!"
+        return
+    }
+    answer 3 {
+        continue
+    }
+}
+say "Phoenix", "Let's sound the clock now, here in this court."
+say "Phoenix", "Your Honor, may I have the clock?"
+say "Phoenix", "I ask the court to listen very carefully..."
+say "Alarm clock", "...*beep*..."
+say "Alarm clock", "[I think it's 8:25.]"
+music 'cornered'
+say "Judge", "That certainly is a strange way to announce the time."
+say "Phoenix", 'Well, he is "The Thinker," after all.'
+say "Judge", "So, we've heard the clock. What are your conclusions, Mr. Wright?"
+say "Phoenix", "Mr. Payne... can you tell me what time it is now?"
+say "Payne", "It's 11:25..."
+say "Payne", "Ack!"
+say "Phoenix", "As you can see, this clock is exactly three hours slow!"
+say "Phoenix", "Precisely the discrepancy between what Mr. Sahwit heard and the actual time of death!"
+say "Phoenix", "So, Mr. Sahwit..."
+say "Phoenix", "Try to talk your way out of this one!"
+say "Sahwit", "..."
+say "Sahwit", "...Hah! Hah hah!"
+say "Sahwit", "You forgot one thing!"
+think "Phoenix", "Uh oh... what's he talking about...?"
+say "Sahwit", "While it may seem like that clock IS running three hours slow..."
+say "Sahwit", "It proves nothing!"
+say "Sahwit", "How do you know it was running three hours slow on the day of the murder!?"
+say "Sahwit", "If you can't prove that, you don't have a case!"
+say "Phoenix", "...!"
+think "Phoenix", "He's right! How am I going to prove that!?"
+think "Phoenix", "Dammit! I was so close!"
+say "Judge", "Mr. Wright?"
+say "Judge", "It seems you lack the critical evidence to support your claim."
+say "Phoenix", "...!"
+say "Phoenix", "Yes, Your Honor."
+say "Judge", "This means I cannot let you indict the witness."
+say "Judge", "Unfortunately..."
+sfx 'gavel'
+music 'stop'
+say "Judge", "This ends the cross-examination of Mr. Frank Sahwit."
+say "Sahwit", "I come all the way down here to testify, and look what happens!"
+say "Sahwit", "They treat me like a criminal! A criminal!"
+say "Sahwit", "You lawyers are all slime!"
+think "Phoenix", "Grr! I almost had him!"
+think "Phoenix", "Sorry, Larry... I failed you."
+think "Phoenix", "There's nothing I can do about it now..."
+sleep 1000
+music 'cornered'
+say "Mia", "Not so fast, Mr. Sahwit!"
+say "Phoenix", "Mia! I mean, Chief!"
+say "Mia", "Listen up, Wright!"
+say "Mia", "Don't throw this one away, not like this! Think!"
+say "Phoenix", "But, Chief, it's over."
+say "Phoenix", "I can't prove the clock was slow the day of the murder!"
+say "Phoenix", "Nobody can prove that!"
+say "Mia", "Um... well, yes."
+say "Mia", "But that doesn't mean you can't still win! Try thinking out of the box!"
+say "Mia", "Don't waste time doubting the facts. Assume the clock was three hours slow and..."
+say "Mia", "Think through it!"
+say "Mia", 'Ask yourself, "Why was the clock three hours slow"?'
+say "Mia", "Figure out the reason, and you'll have your proof!"
+say "Mia", "Right, Wright?"
+say "Mia", "Can you think of a reason as to why the clock would be three hours slow?"
+question "Can you?"
+options "Yes", "No" {
+    answer 1 {
+        say "Phoenix", "..."
+        say "Phoenix", "Wait!"
+        say "Phoenix", "Maybe I can prove it!"
+        say "Mia", "You must have evidence somewhere that can prove it, Wright!"
+        say "Mia", "Find it and let them have it!"
+        say "Judge", "Well, Mr. Wright?"
+        say "Judge", "You say the clock was already running slow on the day of the murder..."
+        say "Judge", "Do you have evidence to prove this?"
+        say "Phoenix", "Of course."
+        say "Phoenix", "There is a piece of evidence in the Court Record that can prove my claim beyond a doubt!"
+        say "Sahwit", "Hah! Tough words! Let's see you pull this one off!"
+        continue
+    }
+    answer 2 {
+        say "Phoenix", "H-how am I supposed to know that!?"
+        say "Mia", "I know you can figure it out!"
+        say "Mia", "There must be some evidence in the Court Record..."
+        say "Mia", "Something that can show why that clock was three hours slow!"
+        say "Mia", "Find it, and he won't have a foot to stand on!"
+        say "Judge", "Mr. Wright?"
+        say "Phoenix", "Y-y-yes, Your Honor!"
+        say "Judge", "You say the clock was already running slow on the day of the murder..."
+        say "Judge", "Do you have evidence to prove this?"
+        think "Phoenix", "This is it... all or nothing!"
+        say "Phoenix", "Yes, Your Honor."
+        say "Phoenix", "I believe I have the evidence that can prove my claim!"
+        say "Sahwit", "Hah hah! I'd like to see THAT!"
+        continue
+    }
+}
+say "Judge", "Let's see this evidence that proves why the clock was running slow!"
+prove "Why was the clock running slow?" {
+    present default {
+        say "Judge", "Um, excuse me. This proves your claim... how?"
+        say "Judge", "I can't see what that evidence has to do with the clock."
+        think "Phoenix", "D'oh! That wasn't it!"
+        say "Phoenix", "One more chance... Give me just one more chance!"
+        say "Judge", "Alright, Mr. Wright, but time is not on your side."
+        say "Judge", "Be quick about it."
+        return
+    }
+    present passport {
+        continue
+    }
+}
+say "Phoenix", "The victim had just returned home from abroad the day before the murder."
+say "Phoenix", "As we all know, the time difference between here and Paris is nine hours!"
+say "Phoenix", "When it's 4:00 PM here, it's 1:00 AM the next day there."
+say "Phoenix", "The clock wasn't three hours slow, it was nine hours fast!"
+say "Phoenix", "The victim hadn't reset her clock since returning home!"
+say "Phoenix", "That's why the time you heard when you struck her dead in her apartment was wrong!"
+say "Phoenix", "Proof enough for you, Mr. Sahwit? Or should I say... Mr. Did It!"
+say "Sahwit", "Ngh! ...!"
+cutscene "Sahwit passes out."
+sfx 'crowd'
+sfx 'gavel' sfx 'gavel' sfx 'gavel'
+music 'stop'
+say "Judge", "O-order! Order, I say!"
+sleep 1000
+say "Judge", "Well..."
+say "Judge", "This case has certainly turned out differently than we all expected."
+say "Judge", "Mr. Payne... your client?"
+say "Payne", "He... er... he was arrested and has been taken away, Your Honor."
+say "Judge", "Very well."
+say "Judge", "Mr. Wright?"
+say "Phoenix", "Yes, Your Honor."
+say "Judge", "I have to say, I'm impressed."
+say "Judge", "I don't think I've ever seen someone complete a defense so quickly..."
+say "Judge", "and find the true culprit at the same time!"
+say "Phoenix", "Thank you, Your Honor."
+say "Judge", "At this point, this is only a formality, but..."
+say "Judge", "This court finds the defendant, Mr. Larry Butz..."
+say "Judge", "--- NOT GUILTY ---"
+say "Judge", "And with that... The court is adjourned."
+sleep 1000
+say "Phoenix", "It turns out that Frank Sahwit was a common burglar!"
+say "Phoenix", "He posed as a newspaper salesman to check and see when people were out of the house!"
+say "Phoenix", "That day..."
+say "Phoenix", "When Larry went to her apartment, the victim wasn't home."
+say "Phoenix", "After he left, Mr. Sahwit let himself in to do his dirty work!"
+say "Phoenix", "While he was searching her place, the victim returned!"
+say "Phoenix", "Flustered, Mr. Sahwit grabbed the nearest blunt object he could find..."
+sleep 500
+say "", "\033[32m\033[1mAugust 3, 2:32 PM\nDistrict Court\nDefendant Lobby No. 2\033[0m \b"
+music 'endcase'
+think "Phoenix", "Whew... I still can't believe we won!"
+say "Mia", "Wright! Good job in there!"
+say "Mia", "Congratulations!"
+say "Phoenix", "Th-thanks, Chief. I owe it all to you."
+say "Mia", "Not at all, not at all! You fought your own battles in there."
+say "Mia", "It's been a while since I've seen a trial end on such a satisfying note!"
+think "Phoenix", "I've never seen the chief looking this happy..."
+think "Phoenix", "If she's this glad, imagine how Larry must feel!"
+say "Butz", "My life is over..."
+say "Phoenix", "Larry! You're supposed to be happy! What's wrong now!?"
+say "Butz", "Aww, Nick..."
+say "Butz", "Don't worry 'bout me! I'll be dead and gone soon!"
+say "Phoenix", "Good! Wait, no! I mean... Bad! Bad bad bad!"
+say "Phoenix", "Larry, you're innocent! The case is closed."
+say "Butz", "..."
+say "Butz", "But... but my Cindy-windy's gone, man! Gone forever!"
+think "Phoenix", "Larry, she was a... Nah... Never mind."
+say "Mia", "Congratulations, Harry!"
+say "Butz", "H-Harry...?"
+say "Mia", "Yes, you! I can practically see the headlines now: \"Harry Butz, Innocent!\""
+say "Butz", "Heh... um... thanks! I really owe you one."
+say "Butz", "I won't forget this, ever! Let's celebrate! Dinner? Movie? My treat!"
+say "Mia", "Oh, no, I couldn't."
+think "Phoenix", "Hey, I was the one who got you off the hook!"
+say "Butz", "Oh, hey!"
+say "Butz", "H-here, take this! It's a present!"
+say "Mia", "A present? For me?"
+say "Mia", "Wait... Wasn't this the evidence that..."
+say "Butz", "Actually, I made this clock for her!"
+say "Butz", "I made one for her and one for me."
+say "Mia", "R-really? You? You made this?"
+say "Mia", "..."
+say "Mia", "Well, thank you. I'll keep it as a memento."
+say "Butz", "Yo, Nick..."
+say "Butz", "Can you believe it? I was so into that chick..."
+say "Butz", "And... and she was just playing me for a fool!"
+say "Butz", "Don't that make you wanna just cry? *sob*"
+say "Phoenix", "Larry..."
+say "Mia", "..."
+say "Mia", "Are you so sure?"
+say "Butz", "Ex-squeeze me?"
+say "Mia", "I think she thought quite a lot of you, in her own way."
+say "Butz", "Nah, you don't gotta sympathize with me, 'sokay."
+say "Mia", "Oh, I'm not just sympathizing, really."
+say "Mia", "Isn't that right, Wright? Don't you have something to show your friend?"
+say "Mia", "Something that proves how she felt about him?"
+say "Phoenix", "H-huh? Oh, yeah, right!"
+think "Phoenix", "What the heck is she talking about?"
+prove "What proves how Cindy felt about Larry?" {
+    present default {
+        say "Phoenix", "Here you go, Larry. Proof."
+        say "Butz", "..."
+        say "Butz", "Eh... heh heh? It's okay, Nick. Don't worry about me."
+        say "Butz", "I'll forget about her soon enough."
+        say "Butz", "Look, I'm gonna head home. Thanks a ton, eh?"
+        think "Phoenix", "Guess that wasn't the right thing to show him..."
+        continue
+    }
+    present statue {
+        say "Phoenix", "Check this out, Larry. Proof Positive you weren't just some chump to her."
+        say "Butz", "Huh...? Where'd you get that clock?"
+        say "Phoenix", "This is the clock you made for her, Larry!"
+        say "Phoenix", "She took it with her when she traveled."
+        say "Butz", "Hmm, she probably just needed a clock, that's all."
+        say "Phoenix", "You think so? It's a pretty heavy clock to take traveling."
+        say "Butz", "..."
+        say "Phoenix", "Well, make of it what you will."
+        say "Butz", "..."
+        say "Butz", "Hey, Nick."
+        say "Butz", "I'm glad I asked you to be my lawyer."
+        say "Butz", "Really, I am. Thanks."
+        think "Phoenix", "Hope that made him feel a little better..."
+        continue
+    }
+}
+music 'stop'
+say "Mia", "Wright?"
+say "Mia", "I hope you see the importance of evidence now."
+say "Mia", "Also, hopefully you realize, things change depending on how you look at them."
+say "Mia", "People, too."
+say "Mia", "We never really know if our clients are guilty or innocent."
+say "Mia", "All we can do is believe in them."
+say "Mia", "And in order to believe in them, you have to believe in yourself."
+say "Mia", "Wright..."
+say "Mia", "Listen. Learn. Grow strong."
+say "Mia", "Never let go of what you believe in. Never."
+music 'endcase'
+say "Mia", "Well, I think our work here is done! Shall we be off?"
+say "Phoenix", "Yeah, I guess so!"
+say "Mia", "Say, how about dinner. On me?"
+say "Mia", "We'll drink a toast to innocent Butz!"
+say "Phoenix", "Yeah!"
+say "Mia", "Oh, speaking of Harry..."
+say "Mia", "You were saying part of why you became a lawyer was because of him."
+say "Phoenix", "Er, yeah. Part, at least."
+say "Mia", "You'll have to tell me more about it sometime! Maybe... over drinks?"
+sleep 1000
+say "Phoenix", "And so, my first trial came to a close."
+say "Phoenix", "Larry slapped me on the back and said, \"Gee, Nick, it's good to have friends!\""
+say "Phoenix", "But I'm pretty sure he's not going to pay me. Unless you count the clock he gave Mia."
+say "Phoenix", "..."
+music 'stop'
+say "Phoenix", "I didn't know it then..."
+say "Phoenix", "but that clock was soon going to be at the center of another incident."
+say "Phoenix", "And my promise to tell the chief about me and Larry..."
+say "Phoenix", "would be one promise that I wouldn't be able to keep."
+
+cutscene "--- THE END ---"

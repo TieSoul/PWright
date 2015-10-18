@@ -1,0 +1,408 @@
+takethat "phoenix-takethat"
+say "Cellular", "r{Brrring... Brrrring...}"
+say "Cellular", "r{*beep*}"
+say "???", "g{Hello? This is Maya.}"
+say "Mia", "Hey Maya, it's me."
+music "sisters"
+say "???", "g{Mia! What's up? You haven't called in a while.}"
+say "Mia", "Sorry, I've been so busy. How you been?"
+say "???", "g{Well, LONELY. And it's all YOUR fault.}"
+say "???", "g{Nah, I'm just teasing.}"
+say "???", "g{I've been great! I'm finally getting used to having my own place.}"
+say "Mia", "That's good to hear."
+say "Mia", "Actually, I'm calling because I have a favor to ask."
+say "???", "g{I know, I know. You want me to hold evidence for you?}"
+say "Mia", "Sharp as always!"
+say "Mia", "There's a lot of buzz about the upcoming trial..."
+say "Mia", "I just don't feel safe keeping the evidence here."
+say "???", "g{I gotcha. So, what is it this time?}"
+say "Mia", "It's... r{a clock}."
+say "???", "g{A clock?}"
+say "Mia", "Yeah, it's made to look like that statue, \"The Thinker.\" And it tells you the time!"
+say "Mia", "I thought you might like it. You always liked toys."
+say "???", "g{Hey! I'm not a little girl anymore, Sis!}"
+say "Mia", "Now, now. You know I'm only teasing."
+say "Mia", "Ah, I should probably tell you, the clock isn't talking right now."
+say "???", "g{Huh? It's not working? That's lame!}"
+say "Mia", "I had to take the clockwork out. Sorry."
+say "Mia", "I put some papers inside it instead."
+say "???", "g{Papers? Is that the evidence, then?}"
+say "???", "g{Hmm, well... there's a possibility that it might turn out that way, yes.}"
+say "Mia", "Can you come by the office tonight, say 9:00, to pick it up?"
+say "Mia", "I'll be in a pretrial meeting until then."
+say "???", "g{Okay, Sis, but I expect dinner! Something good!}"
+say "???", "g{Like... burgers! I could really go for a good burger.}"
+say "Mia", "Okay, okay. We'll hit the usual joint."
+say "???", "g{Alright! It's a deal.}"
+say "???", "g{Okay, Sis, see you soon!}"
+say "Mia", "Yep. I'll be waiting, Maya."
+say "Cellular", "r{*beep*}"
+say "Cellular", "g{[Conversation recorded. September 5, 9:27 AM]}"
+music "stop"
+say "", "g{September 5, 8:57 PM\nFey & Co. Law Offices}"
+say "???", "Now, Miss Fey, I'll take what's mine... the papers."
+say "Mia", "I'm sorry, but I can't give you what I don't have."
+say "???", "Miss Fey, you are a poor liar."
+say "???", "Why, I see it right over there..."
+say "???", "That must be r{\"The Thinker\"} that swallowed those papers."
+say "Mia", "How could you know...?"
+say "???", "Ho hoh. You are not cogniferous of my background?"
+say "???", "Gathering information is my business, you see."
+say "Mia", "I... I should have been more careful."
+say "???", "Ho hoh."
+say "???", "My dear Miss Fey... I am so very sorry."
+say "???", "But I am afraid I must ask you for one more thing."
+music "suspense"
+say "???", "Your eternal silence... Farewell, Miss Fey."
+say "Mia", "!!!"
+music "stop"
+sfx "hit"
+cutscene "Red... White... Blue..."
+sleep 3000
+cls
+say "", "\ng{September 5, 9:08 PM\nFey & Co. Law Offices}"
+say "Phoenix", "Uh oh, I'm late."
+say "Phoenix", "Huh, that's strange. The chief must have gone home already."
+say "Phoenix", "She said her sister was coming over so we should all go out for dinner..."
+say "Phoenix", "..."
+say "Phoenix", "What's that smell...?"
+music "suspense"
+say "Phoenix", "r{Blood}...?"
+say "Phoenix", "Mia! b{(Maybe she's in her office!)}"
+adds evidence "Attorney's Badge", "Type: Other\nOne of my possessions.\nNo one would believe I was a defense attorney if I didn't carry this.", badge
+adds profile "Mia Fey", "Age: 27\nGender: Female\nChief Attorney at Fey & Co.. My boss, and a very good defense attorney.", mia
+place office, "Office" {
+    move offices
+    music "icore"
+    desc "Mia's office.
+Mia is lying slumped against the wall, and the statue of \"The Thinker\" is lying next to her.
+Some glass shards are lying in the corner next to Mia.
+There's a telephone on Mia's desk."
+    enter {
+        say "Phoenix", "That smell... Blood!"
+        say "???", "..."
+        say "???", "*sob*"
+        say "???", "Sis..."
+        think "Phoenix", "Someone's there!"
+        say "Phoenix", "...!"
+        print "\nYou find Mia slumped against the wall under the window in her office. A girl in purple robes of some kind is crying at her side.\n"
+        say "Phoenix", "Chief? Chief...?"
+        say "Phoenix", "Chief!!"
+        print "\nYou turn towards the strange girl.\n"
+        music "stop"
+        say "Phoenix", "Who are you?"
+        say "???", "..."
+        sfx "damage1"
+        think "Phoenix", "The strange girl dropped out cold. I left her lying on the office sofa."
+        think "Phoenix", "I went back to the chief where she lay under the window."
+        think "Phoenix", "Her body was still warm..."
+        think "Phoenix", "I could feel it when I held her shoulder."
+        think "Phoenix", "Then, all too quickly, it began to fade..."
+        think "Phoenix", "Until finally she was cold."
+        say "Phoenix", "Chief..."
+        offices:music "icore"
+        offices:enter {
+            music "stop"
+            say "Phoenix", "...!"
+            think "Phoenix", "That girl just now... Where did she go!?"
+            think "Phoenix", "I put her right there on that sofa...!"
+            think "Phoenix", "Uh oh... I hope she didn't run on me."
+            print "\nSuddenly, the strange girl is standing in front of you.\n"
+            say "Phoenix", "Yipes!"
+            think "Phoenix", "Don't scare me like that..."
+            music "icore"
+            say "Phoenix", "Umm..."
+            say "Phoenix", "Excuse me but, who are you?"
+            say "???", "..."
+            say "Phoenix", "It's okay. I work here."
+            say "Maya", "Maya..."
+            say "Maya", "Maya Fey."
+            say "Phoenix", "Maya... Fey?"
+            if epaper {
+                think "Phoenix", "\"Maya\"...?"
+                think "Phoenix", "So Mia was writing this girl's name!"
+                think "Phoenix", "Maybe I should show her the receipt?"
+                think "Phoenix", "I never thought there'd be a use for evidence like this outside the courtroom!"
+            }
+            set flag metmaya
+        }
+        offices:person maya1
+    }
+    examine "window" {
+        say "Phoenix", "There's a large building right across from the office."
+        say "Phoenix", "The \"Gatewater Hotel.\" A nice, luxurious place."
+    }
+    examine "the thinker", "statue" {
+        say "Phoenix", "It's encrusted with dried blood."
+        say "Phoenix", "How ironic that this became the murder weapon... again."
+    }
+    examine "glass shards", "shards of glass" {
+        say "Phoenix", "Some shards of glass are scattered on the floor."
+        say "Phoenix", "They seem to be the remains of a glass light stand."
+    }
+    examine "mia fey", "chief" {
+        say "Phoenix", "Chief..."
+        say "Phoenix", "It's hard seeing her like this, but if there are any clues here..."
+        say "Phoenix", "She was struck on the head with a blunt object."
+        say "Phoenix", "She probably died instantly."
+        say "Phoenix", "\"The Thinker\" lying next to her must have been the murder weapon."
+        add evidence "The Thinker", "Type: Weapons
+Retrieved at the Fey Law Office.
+The murder weapon. Looks like a statue, but it's actually a clock. Made by Larry Butz.", statue
+        say "Phoenix", "Hmm... there are some glass shards near the chief's body."
+        say "Phoenix", "Must be pieces of the glass light stand lying broken in the back of the room."
+        add evidence "Glass Shards", "Type: Evidence
+Retrieved at the Fey Law Office.
+The broken remains of a glass light stand. Broken beyond all recognition.", glass
+        say "Phoenix", "Nothing else that seems like a clue here..."
+        say "Phoenix", "Hmm...?"
+        say "Phoenix", "A piece of paper! It must have fallen from Mia's hand!"
+        say "Phoenix", "What could it be?"
+        office:desc "Mia's office.
+Mia is lying slumped against the wall, and the statue of \"The Thinker\" is lying next to her.
+Some glass shards are lying in the corner next to Mia.
+There's a telephone on Mia's desk.
+A piece of paper is lying beside Mia's hand."
+        office:examine "piece of paper" {
+            say "Phoenix", "!"
+            say "Phoenix", "A word is written in blood on this scrap of paper!"
+            say "Phoenix", "\"Maya\"...? Did Mia write this?"
+            say "Phoenix", "This piece of paper is a receipt from a department store, dated yesterday."
+            if metmaya {
+                think "Phoenix", "Wait a second!"
+                think "Phoenix", "\"Maya\"...!"
+                think "Phoenix", "Was Mia trying to tell us something about that girl?"
+                think "Phoenix", "I think I'd better show her this receipt."
+                think "Phoenix", "I never thought there'd be a use for evidence like this outside the courtroom!"
+            }
+            add evidence "Receipt", "Type: Evidence
+Retrieved at the Fey Law Office.
+A department store receipt with letters written in blood on the back.", receipt
+            set flag epaper
+            think "Phoenix", "I think that's enough snooping around for now."
+            think "Phoenix", "I'd better call the police..."
+            think "Phoenix", "and find out what that girl was doing here."
+        }
+        office:examine "mia fey", "chief" {
+            say "Phoenix", "It's painful to look... but I have to, for Mia's sake."
+            say "Phoenix", "Looks like she was hit in the head with a blunt weapon."
+            say "Phoenix", "She probably died instantly."
+        }
+    }
+    examine "telephone" {
+        if telephone {
+            say "Phoenix", "The phone receiver is missing a few screws."
+            say "Phoenix", "I'd better not use it."
+        } else {
+            say "Phoenix", "Right! I'd better call the police!"
+            say "Phoenix", "...?"
+            say "Phoenix", "That's funny..."
+            say "Phoenix", "A few of the screws on the receiver are missing..."
+            say "Phoenix", "It looks like someone was halfway through taking it apart."
+            say "???", "Police!?"
+            say "???", "Please, come quick!"
+            think "Phoenix", "Wh-what was that!?"
+            think "Phoenix", "Someone screaming from outside the window!?"
+            say "Phoenix", "...!"
+            say "Phoenix", "She's staring right at me!"
+            say "Phoenix", "She's holding a phone in her hand..."
+            set flag telephone
+        }
+    }
+    examine default {
+        say "Phoenix", "No clues here."
+    }
+}
+place offices, "Fey & Co. Law Offices" {
+    move office
+    music "suspense"
+    when telephone, preceipt {continue}
+    desc "The law offices in which I work. \nThere's a reception desk just in front of the door, and a sofa with a large painting behind it against the wall opposite to the desk."
+    examine default {
+        say "Phoenix", "I smell blood... and that can't be good!"
+        say "Phoenix", "I have to check and see if Mia... the Chief's okay!"
+    }
+}
+person maya1, "Maya", "What happened", "You and the Chief" {
+    talk 1 {
+        think "Phoenix", "She seems to be in shock. I don't want to disturb her, but I have to know..."
+        say "Phoenix", "Um... excuse me?"
+        say "Phoenix", "Can you tell me what happened?"
+        say "Maya", "..."
+        say "Maya", "I came in... The room was dark."
+        say "Maya", "And Sis... Sis...!"
+        think "Phoenix", "So she was already dead."
+    }
+    talk 2 {
+        say "Phoenix", "So, you're the chief's...?"
+        say "Maya", "Sister. I'm her younger sister."
+        say "Phoenix", "And you were here... visiting? This late at night?"
+        say "Maya", "Yes. She said she wanted me to keep some evidence for her."
+        say "Phoenix", "Evidence...?"
+        say "Maya", "Yes... I-it was that clock..."
+        say "Maya", "It was \"The Thinker.\""
+    }
+    present default {
+        say "Maya", "I'm sorry, I've never seen that before."
+    }
+    present statue {
+        say "Phoenix", "Um, about \"The Thinker\"..."
+        say "Maya", "!"
+        say "Maya", "The Th-Thinker..."
+        say "Maya", "That was... Oh, Sis! *sob*"
+        think "Phoenix", "Hmm, probably shouldn't have asked her about the murder weapon."
+    }
+    present glass {
+        say "Phoenix", "This was lying next to the chief."
+        say "Maya", "I know. I saw it there too."
+        say "Maya", "I thought they might be pieces of the light stand."
+        say "Phoenix", "Hmm. Maybe."
+        think "Phoenix", "Never heard of a glass light stand before..."
+    }
+    present receipt {
+        set flag preceipt
+        say "Phoenix", "Before Mia died, she wrote a message with her own blood."
+        say "Phoenix", "She wrote it on the back of this receipt."
+        say "Maya", "!"
+        say "Maya", "Th-th-that's MY name!"
+        say "Maya", "W-why!? Why would she write my name?"
+        say "Phoenix", "Please, just calm down."
+        say "Maya", "W-why would Sis write my name?"
+        think "Phoenix", "Uh-oh. Now I've done it..."
+        if !telephone {
+            think "Phoenix", "I'd better hurry up and call the police!"
+        }
+    }
+}
+start offices
+cutscene "r{*whee-ooo* *whee-ooo*}"
+cutscene "r{*whee-ooo* *whee-ooo*}"
+say "Phoenix", "!"
+say "Phoenix", "The police! b{(Sounds like they're coming this way!)}"
+say "", "Freeze! Police!"
+print "\nA man in a green coat storms into the office.\n"
+say "Gumshoe", "Alright, I'm Detective Dick Gumshoe, see?"
+think "Phoenix", "Gumshoe...? What an odd name."
+say "Gumshoe", "We received a report from the building across the way, see."
+say "Gumshoe", "Got a person saying they saw a murder."
+think "Phoenix", "It must have been that woman I saw."
+say "Gumshoe", "Anyway, I don't want either of you moving one inch, 'kay?"
+think "Phoenix", "Great. Just great."
+think "Phoenix", "Maya... Wait, she wouldn't have... nah."
+say "Gumshoe", "Whoaaaaaaaaaaaaaah!"
+say "Gumshoe", "Scuze me!"
+say "Maya", "Eek!"
+say "Gumshoe", "This word \"Maya\" here mean anything to you?"
+say "Maya", "...!"
+say "Maya", "Um... that..."
+say "Maya", "That's my name..."
+say "Gumshoe", "WHAAAAT!?"
+say "Gumshoe", "The victim drew this here note in her own blood, see?"
+say "Gumshoe", "With her dying breath, she wrote down the killer's name!"
+say "Maya", "K-killer...? I'm not--"
+say "Gumshoe", "Case closed! You're coming down to the precinct, ma'am."
+say "Maya", "W-what?"
+sleep 1000
+cls
+say "Phoenix", "Mia's younger sister, Maya, was arrested on the spot."
+say "Phoenix", "I was taken in for questioning and didn't get out until the next morning."
+say "Phoenix", "My eyes were heavy... but I couldn't sleep."
+say "Phoenix", "I sat around, waiting for visiting hours to begin at the detention center."
+say "Phoenix", "I had to talk to Maya as soon as possible."
+sleep 1000
+cls
+say "", "g{September 6, 9:07 AM
+Detention Center
+Visitor's Room}"
+think "Phoenix", "Wow, they have poor Maya locked up like a criminal."
+music "detentioncenter"
+say "Maya", "Oh!"
+say "Maya", "It's you! The lawyer..."
+say "Maya", "G-good morning."
+say "Phoenix", "Good morning!"
+think "Phoenix", "She looks so tired..."
+say "Maya", "Um..."
+say "Maya", "Are you going to be my attorney?"
+say "Phoenix", "Well, that's what I wanted to talk to you about..."
+question "Be Maya's attorney?"
+options "It's up to you", "Of course I will", "Sorry, not a chance" {
+    answer 1 {
+        think "Phoenix", "I'd better give it to her straight..."
+        say "Phoenix", "It's up to you."
+        say "Maya", "Up... to me?"
+        say "Phoenix", "Yes. I don't think this is something I should decide."
+        say "Phoenix", "After all, you're the one in trouble here."
+        say "Maya", "..."
+        say "Maya", "They're never going to believe me... are they?"
+        say "Maya", "Even you, when you found me in the office. You looked at me like I had done it!"
+        continue
+    }
+    answer 2 {
+        think "Phoenix", "First things first, I better get her cheered up..."
+        say "Phoenix", "Yeah, of course I will! Cheer up!"
+        say "Maya", "R-really...?"
+        think "Phoenix", "Whoa! Did I say the wrong thing? She looks sadder now!"
+        say "Phoenix", "Um... what... what's wrong? You don't think I can do it?"
+        say "Maya", "..."
+        say "Maya", "No... no one could!"
+        say "Maya", "Who would believe me?"
+        say "Maya", "Even you, when you found me in the office. You looked at me like I had done it!"
+        continue
+    }
+    answer 3 {
+        think "Phoenix", "Maybe if I joke a bit she'll cheer up..."
+        say "Phoenix", "Hah hah! No way, Jose!"
+        say "Phoenix", "Just kidding..."
+        say "Maya", "..."
+        say "Maya", "..."
+        say "Maya", "..."
+        think "Phoenix", "Eh heh. Whoops. That didn't go so well."
+        say "Maya", "...Heh..."
+        say "Phoenix", "Huh?"
+        say "Phoenix", "M-Maya...?"
+        say "Phoenix", "Was that a... chuckle?"
+        say "Maya", "What?"
+        say "Maya", "N-no!"
+        say "Maya", "..."
+        say "Maya", "It wasn't very believable, was it?"
+        think "Phoenix", "Not really..."
+        say "Maya", "I-I'm sorry!"
+        say "Maya", "I just thought, since you'd made a joke..."
+        say "Maya", "Please, don't mind me! You're doing just fine!"
+        think "Phoenix", "Who's trying to cheer up who here!?"
+        say "Maya", "I knew it."
+        say "Maya", "No one will believe me."
+        say "Phoenix", "What?"
+        say "Maya", "Even you--when you found me in the office. You looked at me like I had done it!"
+        continue
+    }
+}
+think "Phoenix", "Did I look at her like that?"
+say "Phoenix", "No, no! I never thought..."
+say "Maya", "I-it's okay. I understand."
+say "Maya", "..."
+say "Maya", "And... I've also heard about you."
+say "Phoenix", "Heard...? Heard what about me?"
+say "Maya", "I... was talking to my sister on the phone the other day..."
+say "Mia", "g{\"Today was my junior partner's first time in court.\"}"
+say "Maya", "Wow! Really? How'd that go?"
+say "Mia", "g{\"It was quite the scene!\"}"
+say "Mia", "g{\"Honestly, I was on edge the whole time. It's been a while...\"}"
+say "Maya", "Hah! So, he crashed and burned?"
+say "Mia", "g{\"...He's a genius.\"}"
+say "Mia", "g{\"One of those 'strike fear into the hearts of evil' types...\"}"
+say "Mia", "g{\"The only thing he's lacking is... experience.\"}"
+say "Maya", "Huh, sounds like it was fun!"
+say "Maya", "Well, I know who to go to if I ever get into trouble now!"
+say "Mia", "g{\"I don't know, Maya.\"}"
+say "Mia", "g{\"I think you might want to wait... give him three more years.\"}"
+say "Mia", "g{\"That is, unless you want to be found guilty.\"}"
+say "Maya", "That's what she said!"
+say "Phoenix", "..."
+say "Maya", "I-I'm sorry!"
+say "Maya", "I didn't mean to trouble you..."
+say "Phoenix", "No, it's okay. It's true, I guess."
+say "Phoenix", "But... at the same time, I can't just sit and watch!"
+say "Phoenix", "When I think of the person who did this to Mia..."
+say "Maya", "..."
+say "Maya", "I know..."
