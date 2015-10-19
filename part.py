@@ -431,22 +431,35 @@ save - save your progress and quit the game"""
                         currplace = names[currplace.move[place-1]]
                 elif inp == 'talk' or inp == 't':
                     if currplace.person:
-                        person = names[currplace.person]
-                        n = 1
-                        for i in person.talks:
-                            if n in person.talk.keys():
-                                print str(n) + ") " + i
-                            n += 1
-                        try:
-                            talk = int(raw_input('talk> '))
-                        except Exception:
-                            talk = 0
-                        if not talk <= 0 and not talk >= n and talk in person.talk.keys():
-                            x = interp_stmts(person.talk[talk], depth=depth+1)
-                            if x == 'save':
-                                return 'save'
-                            elif x is False:
-                                return None
+                        while True:
+                            person = names[currplace.person]
+                            n = 1
+                            f = 1
+                            ps = []
+                            print "0) Never mind"
+                            for i in person.talks:
+                                if n in person.talk.keys():
+                                    print str(f) + ") " + i + ("" if n in person.alreadyTalked else bold(" [NEW]"))
+                                    f += 1
+                                else:
+                                    ps.append(f)
+                                n += 1
+                            try:
+                                talk = int(raw_input('talk> '))
+                            except Exception:
+                                talk = 0
+                            for i in ps:
+                                if talk >= i:
+                                    talk += 1
+                            if not talk <= 0 and not talk >= n and talk in person.talk.keys():
+                                x = interp_stmts(person.talk[talk], depth=depth+1)
+                                person.alreadyTalked.append(talk)
+                                if x == 'save':
+                                    return 'save'
+                                elif x is False:
+                                    return None
+                            else:
+                                break;
                 elif inp.split(' ')[0] in ['present', 'p']:
                     name = ' '.join(inp.split(' ')[1:])
                     x = None

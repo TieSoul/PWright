@@ -72,7 +72,7 @@ say "Phoenix", "Mia! b{(Maybe she's in her office!)}"
 adds evidence "Attorney's Badge", "Type: Other\nOne of my possessions.\nNo one would believe I was a defense attorney if I didn't carry this.", badge
 adds profile "Mia Fey", "Age: 27\nGender: Female\nChief Attorney at Fey & Co.. My boss, and a very good defense attorney.", mia
 place office, "Office" {
-    move offices
+    move offices1
     music "icore"
     desc "Mia's office.
 Mia is lying slumped against the wall, and the statue of \"The Thinker\" is lying next to her.
@@ -100,33 +100,6 @@ There's a telephone on Mia's desk."
         think "Phoenix", "Then, all too quickly, it began to fade..."
         think "Phoenix", "Until finally she was cold."
         say "Phoenix", "Chief..."
-        offices:music "icore"
-        offices:enter {
-            music "stop"
-            say "Phoenix", "...!"
-            think "Phoenix", "That girl just now... Where did she go!?"
-            think "Phoenix", "I put her right there on that sofa...!"
-            think "Phoenix", "Uh oh... I hope she didn't run on me."
-            print "\nSuddenly, the strange girl is standing in front of you.\n"
-            say "Phoenix", "Yipes!"
-            think "Phoenix", "Don't scare me like that..."
-            music "icore"
-            say "Phoenix", "Umm..."
-            say "Phoenix", "Excuse me but, who are you?"
-            say "???", "..."
-            say "Phoenix", "It's okay. I work here."
-            say "Maya", "Maya..."
-            say "Maya", "Maya Fey."
-            say "Phoenix", "Maya... Fey?"
-            if epaper {
-                think "Phoenix", "\"Maya\"...?"
-                think "Phoenix", "So Mia was writing this girl's name!"
-                think "Phoenix", "Maybe I should show her the receipt?"
-                think "Phoenix", "I never thought there'd be a use for evidence like this outside the courtroom!"
-            }
-            set flag metmaya
-        }
-        offices:person maya1
     }
     examine "window" {
         say "Phoenix", "There's a large building right across from the office."
@@ -216,12 +189,60 @@ A department store receipt with letters written in blood on the back.", receipt
 place offices, "Fey & Co. Law Offices" {
     move office
     music "suspense"
-    when telephone, preceipt {continue}
     desc "The law offices in which I work. \nThere's a reception desk just in front of the door, and a sofa with a large painting behind it against the wall opposite to the desk."
     examine default {
         say "Phoenix", "I smell blood... and that can't be good!"
         say "Phoenix", "I have to check and see if Mia... the Chief's okay!"
     }
+}
+place offices1, "Fey & Co. Law Offices" {
+    move office
+    music "icore"
+    when telephone, preceipt {continue}
+    desc "The law offices in which I work. \nThere's a reception desk just in front of the door, and a sofa with a large painting behind it against the wall opposite to the desk."
+    examine 'door' {
+        say "Phoenix", "The door to the chief's office. It's slightly open."
+        say "Phoenix", "I'd better not touch the door knob."
+    }
+    examine 'reception desk' {
+        say "Phoenix", "The reception desk. I usually sit here."
+    }
+    examine 'painting' {
+        say "Phoenix", "A large painting. I guess you'd call this \"modern art.\""
+        say "Phoenix", "I, on the other hand, call it a mistake."
+    }
+    examine 'sofa' {
+        say "Phoenix", "This sofa is for clients. It's leather... a real luxury model."
+    }
+    examine default {
+        say "Phoenix", "No clues here."
+    }
+    enter {
+        music "stop"
+        say "Phoenix", "...!"
+        think "Phoenix", "That girl just now... Where did she go!?"
+        think "Phoenix", "I put her right there on that sofa...!"
+        think "Phoenix", "Uh oh... I hope she didn't run on me."
+        print "\nSuddenly, the strange girl is standing in front of you.\n"
+        say "Phoenix", "Yipes!"
+        think "Phoenix", "Don't scare me like that..."
+        music "icore"
+        say "Phoenix", "Umm..."
+        say "Phoenix", "Excuse me but, who are you?"
+        say "???", "..."
+        say "Phoenix", "It's okay. I work here."
+        say "Maya", "Maya..."
+        say "Maya", "Maya Fey."
+        say "Phoenix", "Maya... Fey?"
+        if epaper {
+            think "Phoenix", "\"Maya\"...?"
+            think "Phoenix", "So Mia was writing this girl's name!"
+            think "Phoenix", "Maybe I should show her the receipt?"
+            think "Phoenix", "I never thought there'd be a use for evidence like this outside the courtroom!"
+        }
+        set flag metmaya
+    }
+    person maya1
 }
 person maya1, "Maya", "What happened", "You and the Chief" {
     talk 1 {
@@ -304,6 +325,7 @@ say "Gumshoe", "Case closed! You're coming down to the precinct, ma'am."
 say "Maya", "W-what?"
 sleep 1000
 cls
+music "stop"
 say "Phoenix", "Mia's younger sister, Maya, was arrested on the spot."
 say "Phoenix", "I was taken in for questioning and didn't get out until the next morning."
 say "Phoenix", "My eyes were heavy... but I couldn't sleep."
@@ -311,98 +333,293 @@ say "Phoenix", "I sat around, waiting for visiting hours to begin at the detenti
 say "Phoenix", "I had to talk to Maya as soon as possible."
 sleep 1000
 cls
-say "", "g{September 6, 9:07 AM
-Detention Center
-Visitor's Room}"
-think "Phoenix", "Wow, they have poor Maya locked up like a criminal."
-music "detentioncenter"
-say "Maya", "Oh!"
-say "Maya", "It's you! The lawyer..."
-say "Maya", "G-good morning."
-say "Phoenix", "Good morning!"
-think "Phoenix", "She looks so tired..."
-say "Maya", "Um..."
-say "Maya", "Are you going to be my attorney?"
-say "Phoenix", "Well, that's what I wanted to talk to you about..."
-question "Be Maya's attorney?"
-options "It's up to you", "Of course I will", "Sorry, not a chance" {
-    answer 1 {
-        think "Phoenix", "I'd better give it to her straight..."
-        say "Phoenix", "It's up to you."
-        say "Maya", "Up... to me?"
-        say "Phoenix", "Yes. I don't think this is something I should decide."
-        say "Phoenix", "After all, you're the one in trouble here."
-        say "Maya", "..."
-        say "Maya", "They're never going to believe me... are they?"
-        say "Maya", "Even you, when you found me in the office. You looked at me like I had done it!"
-        continue
+person maya2, "Maya", "Maya", "The day of the crime", "Your cell phone", "Spirit mediums" {
+    talk 1 {
+        say "Phoenix", "There's something I've been wanting to ask you..."
+        say "Maya", "Yes?"
+        say "Phoenix", "What's with that outfit?"
+        say "Maya", "Oh, this?"
+        say "Maya", "This is what all acolytes wear. It's my uniform, you could say."
+        say "Phoenix", "A-acolytes? Like people in religious training? What is it you do?"
+        say "Maya", "Oh! It's nothing strange, really!"
+        say "Maya", "I'm a spirit medium. ...In training."
+        say "Phoenix", "A s-spirit medium!? b{(I'm pretty sure that qualifies as strange.)}"
+        maya2:talk 4 {
+            say "Phoenix", "So you're an acolyte. A, er, medium-in-training."
+            say "Maya", "That's right."
+            say "Maya", "The Fey family, especially the women, have always been very sensitive to the spirit world."
+            say "Phoenix", 'Wait a second, you said the "Fey Family"?'
+            say "Phoenix", "So, Mia was into this stuff too?"
+            say "Maya", "Of course!"
+            say "Maya", 'She left the mountain to "follow her career," she said.'
+            say "Maya", "Her powers were first-class, too!"
+            think "Phoenix", "I... I had no idea."
+            say "Phoenix", "Hmm..."
+            say "Phoenix", "Wait...!"
+            say "Maya", "What?"
+            say "Phoenix", "So, you're a real, honest-to-goodness spirit medium? With E.S.P. and all that?"
+            say "Maya", "Yes. ...In training."
+            say "Phoenix", "Well, can't you contact Mia's spirit, then?"
+            say "Phoenix", "We can just ask her who killed her!"
+            say "Maya", "...!"
+            say "Maya", "I-I'm sorry..."
+            say "Maya", "I'm still in training."
+            say "Maya", "I couldn't do something on that level..."
+            think "Phoenix", "Hmm... I thought that would be too easy."
+            set flag t1
+        }
     }
-    answer 2 {
-        think "Phoenix", "First things first, I better get her cheered up..."
-        say "Phoenix", "Yeah, of course I will! Cheer up!"
-        say "Maya", "R-really...?"
-        think "Phoenix", "Whoa! Did I say the wrong thing? She looks sadder now!"
-        say "Phoenix", "Um... what... what's wrong? You don't think I can do it?"
+    talk 2 {
+        say "Phoenix", "Could you tell me about the day of the murder?"
+        say "Maya", "Yes!"
+        say "Maya", "Let's see... that morning, I got a call from my sister."
+        say "Maya", "She wanted me to hold onto a piece of evidence for an upcoming trial."
+        say "Phoenix", "Evidence?"
+        say "Maya", "Yes. That clock shaped like \"The Thinker.\""
+        think "Phoenix", "The one Larry made..."
+        say "Phoenix", "How could that have been evidence in a case?"
+        say "Maya", "Um, right, she said something about that..."
         say "Maya", "..."
-        say "Maya", "No... no one could!"
-        say "Maya", "Who would believe me?"
-        say "Maya", "Even you, when you found me in the office. You looked at me like I had done it!"
-        continue
+        say "Maya", "I remember!"
+        say "Maya", "Do you want to hear it in her own voice?"
+        say "Phoenix", "H-her own voice!?"
+        say "Maya", "Yes."
+        say "Maya", "I'm pretty sure our conversation is on my cell phone."
+        say "Phoenix", "You recorded it!"
+        say "Maya", "Yeah! I forgot how to delete those things."
+        maya2:talk 3 {
+            say "Phoenix", "So, you say you have a conversation with your sister on your cell phone?"
+            say "Phoenix", "Let's hear it!"
+            say "Maya", "Right!"
+            say "Maya", "Oh!"
+            say "Maya", "I just remembered: that detective took my cell phone."
+            say "Maya", "Sorry."
+            say "Phoenix", "Oh, right. b{(Of course...)}"
+            say "Phoenix", "Next time I see Detective Gumshoe I'll ask him for it."
+            say "Maya", "I'll write you a note so you don't forget, okay?"
+            say "Phoenix", "Sure, thanks."
+            add evidence "Maya's Memo", "Type: Documents\nReceived from Maya Fey.\n\"A conversation I had with my sister is recorded on my cell phone'\"", memo
+            maya2:talk 2 {
+                say "Phoenix", "Could you tell me about the day of the murder?"
+                say "Phoenix", "Sorry... I know it must be hard."
+                say "Maya", "No, it's okay."
+                say "Maya", "All I've been doing the last few hours is talking about it."
+                say "Maya", "I've kind of gotten used to it..."
+                say "Maya", "Let's see... that morning, I got a call from my sister."
+                say "Maya", "She wanted me to hold on to a piece of evidence for an upcoming trial."
+                think 'Phoenix', 'That\'s "The Thinker" clock that Larry made.'
+                think "Phoenix", "It practically qualifies as a serial murderer by now."
+                say "Phoenix", "So then, when did you arrive at the office?"
+                say "Maya", "It was right around 9:00."
+                say "Maya", "The lights were off and... I could smell blood."
+                say "Maya", "Th-then I found her. My sister..."
+                say "Phoenix", "Thanks, Maya."
+                say "Phoenix", "That's all I need to hear for now."
+                set flag t2
+            }
+        }
     }
-    answer 3 {
-        think "Phoenix", "Maybe if I joke a bit she'll cheer up..."
-        say "Phoenix", "Hah hah! No way, Jose!"
-        say "Phoenix", "Just kidding..."
-        say "Maya", "..."
-        say "Maya", "..."
-        say "Maya", "..."
-        think "Phoenix", "Eh heh. Whoops. That didn't go so well."
-        say "Maya", "...Heh..."
-        say "Phoenix", "Huh?"
-        say "Phoenix", "M-Maya...?"
-        say "Phoenix", "Was that a... chuckle?"
-        say "Maya", "What?"
-        say "Maya", "N-no!"
-        say "Maya", "..."
-        say "Maya", "It wasn't very believable, was it?"
-        think "Phoenix", "Not really..."
-        say "Maya", "I-I'm sorry!"
-        say "Maya", "I just thought, since you'd made a joke..."
-        say "Maya", "Please, don't mind me! You're doing just fine!"
-        think "Phoenix", "Who's trying to cheer up who here!?"
-        say "Maya", "I knew it."
-        say "Maya", "No one will believe me."
-        say "Phoenix", "What?"
-        say "Maya", "Even you--when you found me in the office. You looked at me like I had done it!"
-        continue
+    present default {
+        say "Maya", "Sorry... I've never seen that before."
+    }
+    present receipt {
+        say "Phoenix", "Remember that receipt?"
+        say "Maya", "Y-you mean the one with my name on it?"
+        say "Phoenix", "Any idea why she..."
+        say "Maya", "Absolutely none!"
+        say "Maya", "Um..."
+        say "Maya", "Do you trust me?"
+        question "Do you trust Maya?"
+        options "I trust you", "I don't trust you" {
+            answer 1 {
+                say "Phoenix", "I trust you."
+                say "Maya", "Why?"
+                say "Maya", "Don't you think I did it, too?"
+                say "Phoenix", "No, I don't."
+                think "Phoenix", "It's just a hunch, but..."
+                say "Maya", "That detective thinks I did it."
+                say "Phoenix", "..."
+                continue
+            }
+            answer 2 {
+                say "Phoenix", "..."
+                say "Maya", "I didn't think you'd believe me."
+                say "Maya", "You're just like the detective."
+                say "Phoenix", "I'm sorry..."
+                say "Phoenix", "I don't like lying just to make people feel better."
+                say "Phoenix", "But it doesn't mean that I've decided you did it!"
+                think "Phoenix", "She seemed so lost at the crime scene."
+                continue
+            }
+        }
+    }
+    present statue {
+        say "Phoenix", "I wanted to ask you about the murder weapon..."
+        say "Maya", "Poor Sis... *sniff*"
+        think "Phoenix", "Hmm. Better not ask her about this now."
+    }
+    present glass {
+        say "Phoenix", "This was lying next to the chief's body..."
+        say "Maya", "I saw that too."
+        say "Maya", "They said they thought these were pieces of a broken light stand."
+        say "Phoenix", "Yeah, that seems about right."
+        think "Phoenix", "Though I'd never heard of a glass light stand before this..."
+    }
+    present memo {
+        say "Phoenix", "I wanted to ask you about your cell phone..."
+        say "Maya", "That detective took it when they brought me in."
+        think "Phoenix", "So, Gumshoe took it..."
+        think "Phoenix", "I'll have to try to get it back next time I see him..."
     }
 }
-think "Phoenix", "Did I look at her like that?"
-say "Phoenix", "No, no! I never thought..."
-say "Maya", "I-it's okay. I understand."
-say "Maya", "..."
-say "Maya", "And... I've also heard about you."
-say "Phoenix", "Heard...? Heard what about me?"
-say "Maya", "I... was talking to my sister on the phone the other day..."
-say "Mia", "g{\"Today was my junior partner's first time in court.\"}"
-say "Maya", "Wow! Really? How'd that go?"
-say "Mia", "g{\"It was quite the scene!\"}"
-say "Mia", "g{\"Honestly, I was on edge the whole time. It's been a while...\"}"
-say "Maya", "Hah! So, he crashed and burned?"
-say "Mia", "g{\"...He's a genius.\"}"
-say "Mia", "g{\"One of those 'strike fear into the hearts of evil' types...\"}"
-say "Mia", "g{\"The only thing he's lacking is... experience.\"}"
-say "Maya", "Huh, sounds like it was fun!"
-say "Maya", "Well, I know who to go to if I ever get into trouble now!"
-say "Mia", "g{\"I don't know, Maya.\"}"
-say "Mia", "g{\"I think you might want to wait... give him three more years.\"}"
-say "Mia", "g{\"That is, unless you want to be found guilty.\"}"
-say "Maya", "That's what she said!"
-say "Phoenix", "..."
-say "Maya", "I-I'm sorry!"
-say "Maya", "I didn't mean to trouble you..."
-say "Phoenix", "No, it's okay. It's true, I guess."
-say "Phoenix", "But... at the same time, I can't just sit and watch!"
-say "Phoenix", "When I think of the person who did this to Mia..."
-say "Maya", "..."
-say "Maya", "I know..."
+place detentioncenter, "Detention Center" {
+    music "detentioncenter"
+    desc "A visitor's room at the detention center. There's a guard standing very still at the entrance and a security camera on the wall.
+You're separated from the other half of the room with a glass barrier."
+    enter {
+        say "", "g{September 6, 9:07 AM
+Detention Center
+Visitor's Room}"
+        music "detentioncenter"
+        think "Phoenix", "Wow, they have poor Maya locked up like a criminal."
+        say "Maya", "Oh!"
+        say "Maya", "It's you! The lawyer..."
+        say "Maya", "G-good morning."
+        say "Phoenix", "Good morning!"
+        think "Phoenix", "She looks so tired..."
+        say "Maya", "Um..."
+        say "Maya", "Are you going to be my attorney?"
+        say "Phoenix", "Well, that's what I wanted to talk to you about..."
+        question "Be Maya's attorney?"
+        options "It's up to you", "Of course I will", "Sorry, not a chance" {
+            answer 1 {
+                think "Phoenix", "I'd better give it to her straight..."
+                say "Phoenix", "It's up to you."
+                say "Maya", "Up... to me?"
+                say "Phoenix", "Yes. I don't think this is something I should decide."
+                say "Phoenix", "After all, you're the one in trouble here."
+                say "Maya", "..."
+                say "Maya", "They're never going to believe me... are they?"
+                say "Maya", "Even you, when you found me in the office. You looked at me like I had done it!"
+                continue
+            }
+            answer 2 {
+                think "Phoenix", "First things first, I better get her cheered up..."
+                say "Phoenix", "Yeah, of course I will! Cheer up!"
+                say "Maya", "R-really...?"
+                think "Phoenix", "Whoa! Did I say the wrong thing? She looks sadder now!"
+                say "Phoenix", "Um... what... what's wrong? You don't think I can do it?"
+                say "Maya", "..."
+                say "Maya", "No... no one could!"
+                say "Maya", "Who would believe me?"
+                say "Maya", "Even you, when you found me in the office. You looked at me like I had done it!"
+                continue
+            }
+            answer 3 {
+                think "Phoenix", "Maybe if I joke a bit she'll cheer up..."
+                say "Phoenix", "Hah hah! No way, Jose!"
+                say "Phoenix", "Just kidding..."
+                say "Maya", "..."
+                say "Maya", "..."
+                say "Maya", "..."
+                think "Phoenix", "Eh heh. Whoops. That didn't go so well."
+                say "Maya", "...Heh..."
+                say "Phoenix", "Huh?"
+                say "Phoenix", "M-Maya...?"
+                say "Phoenix", "Was that a... chuckle?"
+                say "Maya", "What?"
+                say "Maya", "N-no!"
+                say "Maya", "..."
+                say "Maya", "It wasn't very believable, was it?"
+                think "Phoenix", "Not really..."
+                say "Maya", "I-I'm sorry!"
+                say "Maya", "I just thought, since you'd made a joke..."
+                say "Maya", "Please, don't mind me! You're doing just fine!"
+                think "Phoenix", "Who's trying to cheer up who here!?"
+                say "Maya", "I knew it."
+                say "Maya", "No one will believe me."
+                say "Phoenix", "What?"
+                say "Maya", "Even you--when you found me in the office. You looked at me like I had done it!"
+                continue
+            }
+        }
+        think "Phoenix", "Did I look at her like that?"
+        say "Phoenix", "No, no! I never thought..."
+        say "Maya", "I-it's okay. I understand."
+        say "Maya", "..."
+        say "Maya", "And... I've also heard about you."
+        say "Phoenix", "Heard...? Heard what about me?"
+        say "Maya", "I... was talking to my sister on the phone the other day..."
+        say "Mia", "g{\"Today was my junior partner's first time in court.\"}"
+        say "Maya", "Wow! Really? How'd that go?"
+        say "Mia", "g{\"It was quite the scene!\"}"
+        say "Mia", "g{\"Honestly, I was on edge the whole time. It's been a while...\"}"
+        say "Maya", "Hah! So, he crashed and burned?"
+        say "Mia", "g{\"...He's a genius.\"}"
+        say "Mia", "g{\"One of those 'strike fear into the hearts of evil' types...\"}"
+        say "Mia", "g{\"The only thing he's lacking is... experience.\"}"
+        say "Maya", "Huh, sounds like it was fun!"
+        say "Maya", "Well, I know who to go to if I ever get into trouble now!"
+        say "Mia", "g{\"I don't know, Maya.\"}"
+        say "Mia", "g{\"I think you might want to wait... give him three more years.\"}"
+        say "Mia", "g{\"That is, unless you want to be found guilty.\"}"
+        say "Maya", "That's what she said!"
+        say "Phoenix", "..."
+        say "Maya", "I-I'm sorry!"
+        say "Maya", "I didn't mean to trouble you..."
+        say "Phoenix", "No, it's okay. It's true, I guess."
+        say "Phoenix", "But... at the same time, I can't just sit and watch!"
+        say "Phoenix", "When I think of the person who did this to Mia..."
+        say "Maya", "..."
+        say "Maya", "I know..."
+    }
+    examine 'security camera' {
+        say "Phoenix", "Smile for the camera..."
+    }
+    examine 'security guard' {
+        say "Phoenix", "This guard monitors the visitor's room."
+        say "Phoenix", "He hasn't moved an inch. A real pro, this guy."
+    }
+    examine default {
+        say "Phoenix", "No clues there."
+    }
+    person maya2
+    when t1, t2 {
+        say "Maya", "..."
+        say "Maya", "Um...!"
+        say "Phoenix", "Huh? Something the matter?"
+        say "Maya", "Um... I was wondering, could I ask you a favor?"
+        say "Phoenix", "...?"
+        say "Maya", "This is the address of a famous lawyer."
+        say "Maya", "My sister gave me this a long time ago."
+        say "Maya", "She said if I was ever in trouble, I should call him."
+        say "Maya", "And, well, I'm in trouble."
+        say "Maya", "Do you think you could go ask him to represent me?"
+        think "Phoenix", "Hmm..."
+        question "Go to the famous lawyer?"
+        options "Accept", "Refuse" {
+            answer 1 {
+                say "Phoenix", "Sure, why not? I'll go ask."
+                say "Maya", "Thank you so much!"
+                say "Maya", "I have no one else to turn to..."
+                say "Phoenix", "...?"
+                say "Phoenix", "Say, what about your parents?"
+                say "Maya", "..."
+                say "Maya", "..."
+                say "Maya", "..."
+                say "Phoenix", "I... I see. Don't worry, leave it to me."
+                say "Maya", "Thank you! The trial's tomorrow... at 10:00."
+                say "Phoenix", "W-what!? Tomorrow!?"
+                say "Maya", "Tomorrow."
+                say "Phoenix", "What if this guy refuses!?"
+                say "Maya", "They told me that if I don't find one, the state will pick an attorney to defend me."
+                continue
+            }
+        }
+        say "Phoenix", "When will that happen?"
+        say "Maya", "They're giving me until 4:00 this afternoon."
+        think "Phoenix", "And visiting hours are almost up... I'd better hurry!"
+        say "Phoenix", "Right, I'll be back!"
+    }
+}
+start detentioncenter
